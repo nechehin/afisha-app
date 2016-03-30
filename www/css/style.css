@@ -1,0 +1,21 @@
+.feed-item{
+    margin: 20px 10px;
+    border: none;
+    padding: 0;
+}
+
+.media-left{
+    position: relative;
+    /* display: table-cell; */
+    float: left;
+}
+.media-body{
+    padding-left: 85px;
+    /* padding-bottom: 10px; */
+    height: auto;
+}
+
+.media-body h2{
+    line-height: 20px;
+    white-space: normal;
+}

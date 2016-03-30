@@ -1,7 +1,7 @@
 
 var service = angular.module('service', []);
 
-service.factory('Articles', function($http){
+service.factory('Articles', function($http, $ionicPopup){
 
         var items = [];
 
@@ -9,12 +9,11 @@ service.factory('Articles', function($http){
 
         return {
             load: function(){
-                return $http.get(url, {timeout: 2000}).then(function(response){
-                    console.log(response);
+                return $http.get(url, {timeout: 10000}).then(function(response){
                     items = response.data;
                     return items;
                 }, function(){
-                    console.error('Connection error');
+                    $ionicPopup.alert({title: error});
                 });
             },
 

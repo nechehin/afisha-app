@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.ionicframework.app403108" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://phonegap.com/ns/1.0">
+<widget
+        id="com.ionicframework.app403108"
+        version="0.0.1"
+        xmlns="http://www.w3.org/ns/widgets"
+        xmlns:cdv="http://cordova.apache.org/ns/1.0"
+        xmlns:gap="http://phonegap.com/ns/1.0">
   <name>app</name>
 
   <description>
@@ -23,7 +28,7 @@
   <gap:plugin name="cordova-plugin-splashscreen" source="npm"/>
   <gap:plugin name="com.danielcwilson.plugins.googleanalytics" version="0.6.1"/>
   <gap:plugin name="cordova-plugin-inappbrowser" source="npm"/>
-  
+
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>

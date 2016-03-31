@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('app', ['ionic',  'service'])
+angular.module('app', ['ionic', 'controllers', 'service'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -21,12 +21,39 @@ angular.module('app', ['ionic',  'service'])
       StatusBar.styleDefault();
     }
   });
+
 })
 
-.controller("ArticlesCtrl", function($scope, Articles){
+.filter('unsafe', function($sce) {
+    return function(val) {
+        return $sce.trustAsHtml(val);
+    };
+})
 
-  Articles.load().then(function(){
 
-      $scope.articles = Articles.all();
-  });
+
+.config(function($stateProvider, $urlRouterProvider){
+
+  $stateProvider
+
+      .state('articles',{
+        url: '/',
+        templateUrl: 'templates/list.html'
+
+      })
+
+      .state('article', {
+        url: '/article/:articleId',
+        templateUrl: 'templates/item.html',
+        controller: 'ArticleDetailCtrl',
+        resolve: {
+            item : function(Articles, $stateParams){
+                return Articles.get($stateParams.articleId)
+            }
+        }
+      });
+
+    $urlRouterProvider.otherwise('/');
 });
+
+

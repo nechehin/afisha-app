@@ -1,0 +1,16 @@
+<ion-view view-title="Afisha">
+<ion-content ng-controller="ArticlesCtrl">
+    <ion-list >
+        <ion-item class="feed-item" ng-repeat="article in articles" ui-sref="article({articleId: {{article.id}}})" href="#/article/{{article.id}}">
+
+            <div class="media-left">
+                <img ng-src="{{article.thumb}}">
+            </div>
+            <div class="media-body">
+                <h2>{{article.title}}</h2>
+            </div>
+
+        </ion-item>
+    </ion-list>
+</ion-content>
+</ion-view>

@@ -18,7 +18,7 @@ service.factory('Articles', function($http, $ionicPopup){
                     items = response.data;
                     return items;
                 }, function(){
-                    $ionicPopup.alert({title: 'error'});
+                    $ionicPopup.alert({title: 'Connection error', content: 'Error with your connection'});
                 });
             },
 
@@ -28,7 +28,12 @@ service.factory('Articles', function($http, $ionicPopup){
 
             get: function(id){
 
-                return $http.get(url_item + id + '/?json', {timeout: 10000})
+                return $http.get(url_item + id + '/?json', {timeout: 1000})
+                    .then(function(response){
+                        return response.data;
+                    }, function(response){
+                        $ionicPopup.alert({title: 'Connection error', content: 'Error with your connection'});
+                    });
 
 
             }

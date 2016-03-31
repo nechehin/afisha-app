@@ -1,6 +1,6 @@
 angular.module('controllers', [])
 
-.controller('ArticlesCtrl', function($scope,$stateParams, Articles){
+.controller('ArticlesCtrl', function($scope, $stateParams, Articles){
 
     Articles.load().then(function(){
 
@@ -9,8 +9,10 @@ angular.module('controllers', [])
 
 })
 
-.controller('ArticleDetailCtrl', function( item, $scope){
+.controller('ArticleDetailCtrl', function( Articles, $scope, $stateParams){
 
-    $scope.item = item.data;
+    Articles.get($stateParams.articleId).then(function(data){
+       $scope.item = data;
+    });
 
 })

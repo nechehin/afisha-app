@@ -46,11 +46,7 @@ angular.module('app', ['ionic', 'controllers', 'service'])
         url: '/article/:articleId',
         templateUrl: 'templates/item.html',
         controller: 'ArticleDetailCtrl',
-        resolve: {
-            item : function(Articles, $stateParams){
-                return Articles.get($stateParams.articleId)
-            }
-        }
+
       });
 
     $urlRouterProvider.otherwise('/');

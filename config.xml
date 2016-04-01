@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget
-        id="com.ionicframework.app403108"
+        id="net.tochka.ahisha"
         version="0.0.1"
         xmlns="http://www.w3.org/ns/widgets"
         xmlns:cdv="http://cordova.apache.org/ns/1.0"
@@ -8,10 +8,10 @@
   <name>app</name>
 
   <description>
-        An Ionic Framework and Cordova project.
+        News feed of Afisha Tochka.net
     </description>
-  <author email="you@example.com" href="http://example.com.com/">
-      Your Name Here
+  <author email="example@com.com" href="http://example.com.com/">
+      Vorontsov Pavel
     </author>
   <content src="index.html"/>
   <access origin="*"/>

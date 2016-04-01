@@ -13,8 +13,8 @@ service.factory('Articles', function($http, $ionicPopup){
         url = dev_url;
 
         return {
-            load: function(){
-                return $http.get(url, {timeout: 10000}).then(function(response){
+            load: function(offset){
+                return $http.get(url+'?offset='+offset, {timeout: 10000}).then(function(response){
                     items = response.data;
                     return items;
                 }, function(){

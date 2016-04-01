@@ -1,5 +1,8 @@
-<ion-view view-title="Afisha">
+<ion-view view-title="Afisha" align-title="center">
 <ion-content ng-controller="ArticlesCtrl">
+    <div class="block-header">
+        <h2>Последние новости</h2>
+    </div>
     <ion-list >
         <ion-item class="feed-item" ng-repeat="article in articles" ui-sref="article({articleId: {{article.id}}})" href="#/article/{{article.id}}">
 
@@ -7,10 +10,12 @@
                 <img ng-src="{{article.thumb}}">
             </div>
             <div class="media-body">
-                <h2>{{article.title}}</h2>
+                <h3>{{article.title}}</h3>
             </div>
 
         </ion-item>
+
     </ion-list>
+    <ion-infinite-scroll immediate-check="false" on-infinite="loadMoreItems()" distance="10%"></ion-infinite-scroll>
 </ion-content>
 </ion-view>

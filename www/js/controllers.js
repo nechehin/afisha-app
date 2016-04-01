@@ -6,7 +6,7 @@ angular.module('controllers', [])
     $scope.articles = [];
 
     $scope.loadMoreItems = function(){
-        
+
         if($scope.articles.length > 0) {
             Articles.load(offset).then(function () {
 
@@ -23,7 +23,6 @@ angular.module('controllers', [])
 
         $scope.articles  = Articles.all();
         offset+= 20;
-        console.log(Articles.all());
 
     });
 

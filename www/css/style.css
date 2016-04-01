@@ -73,7 +73,7 @@ article{
 article .video-wrapper {
     position: relative;
 
-    height: 0 !important;
+    /*height: 0 !important;*/
     overflow: hidden;
     background: #F5F5F5;
     /*padding: 10px;*/

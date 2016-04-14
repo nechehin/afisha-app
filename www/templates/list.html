@@ -3,6 +3,10 @@
     <div class="block-header">
         <h2>Последние новости</h2>
     </div>
+    <ion-refresher
+            pulling-text="Потяни, чтобы обновить"
+            on-refresh="refreshListItems()">
+    </ion-refresher>
     <ion-list >
         <ion-item class="feed-item" ng-repeat="article in articles" ui-sref="article({articleId: {{article.id}}})" href="#/article/{{article.id}}">
 

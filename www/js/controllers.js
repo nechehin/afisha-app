@@ -19,6 +19,22 @@ angular.module('controllers', [])
 
     };
 
+    $scope.refreshListItems = function(){
+
+        Articles
+            .load(0)
+            .then(function(){
+                $scope.articles = Articles.all();
+                offset = 20;
+            })
+            .finally(function(){
+                $scope.$broadcast('scroll.refreshComplete');
+            });
+
+
+
+    };
+
     Articles.load(0).then(function(){
 
         $scope.articles  = Articles.all();

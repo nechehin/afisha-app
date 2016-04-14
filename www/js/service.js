@@ -35,7 +35,6 @@ service.factory('Articles', function($http, $ionicPopup){
                         $ionicPopup.alert({title: 'Connection error', content: 'Error with your connection'});
                     });
 
-
             }
         }
     });

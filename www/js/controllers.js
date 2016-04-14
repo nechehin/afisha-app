@@ -58,7 +58,7 @@ angular.module('controllers', [])
 
         articles.every(function(article, index){
 
-           if(article.id == parseInt($stateParams.articleId)){
+           if(article.id == $stateParams.articleId){
 
                articles[index].content = data.content;
                StorageHelper.save('articles', articles);
@@ -71,6 +71,17 @@ angular.module('controllers', [])
         });
 
         $scope.item = data;
+    }).catch( function(err){
+
+        articles.every(function(article){
+           if(article.id == $stateParams.articleId ){
+               $scope.item = article;
+               return false;
+           }else{
+               return true;
+           }
+        });
+
     });
 
 });

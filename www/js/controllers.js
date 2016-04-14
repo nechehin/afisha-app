@@ -1,8 +1,7 @@
 angular.module('controllers', [])
 
-.controller('ArticlesCtrl', function($scope, $stateParams, Articles){
+.controller('ArticlesCtrl', function($scope, $stateParams, $ionicPopup, $window, Articles, StorageHelper){
 
-    var offset = 0;
     $scope.articles = [];
 
     $scope.loadMoreItems = function(){
@@ -10,7 +9,8 @@ angular.module('controllers', [])
         if($scope.articles.length > 0) {
             Articles.load(offset).then(function () {
 
-                $scope.articles = $scope.articles.concat(Articles.all());
+                $scope.articles = StorageHelper.storeArticles($scope.articles, Articles.all(), false);
+
                 offset += 20;
 
                 $scope.$broadcast('scroll.infiniteScrollComplete')
@@ -24,7 +24,8 @@ angular.module('controllers', [])
         Articles
             .load(0)
             .then(function(){
-                $scope.articles = Articles.all();
+                $scope.articles = StorageHelper.storeArticles($scope.articles, Articles.all(), true);
+                console.log(Articles.all());
                 offset = 20;
             })
             .finally(function(){
@@ -35,19 +36,41 @@ angular.module('controllers', [])
 
     };
 
+    var offset = 0;
+
+    $scope.articles = StorageHelper.getArticlesFromLocalStorage();
+
     Articles.load(0).then(function(){
 
-        $scope.articles  = Articles.all();
+        $scope.articles =  StorageHelper.storeArticles($scope.articles, Articles.all(), false);
+
         offset+= 20;
 
     });
 
 })
 
-.controller('ArticleDetailCtrl', function( Articles, $scope, $stateParams){
+.controller('ArticleDetailCtrl', function( Articles, StorageHelper, $scope, $stateParams){
+
+    var articles = StorageHelper.getArticlesFromLocalStorage();
 
     Articles.get($stateParams.articleId).then(function(data){
-       $scope.item = data;
+
+        articles.every(function(article, index){
+
+           if(article.id == parseInt($stateParams.articleId)){
+
+               articles[index].content = data.content;
+               StorageHelper.save('articles', articles);
+               return false;
+
+           }else {
+               return true;
+           }
+
+        });
+
+        $scope.item = data;
     });
 
 });

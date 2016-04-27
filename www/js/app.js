@@ -42,7 +42,9 @@ angular.module('app', ['ionic', 'controllers', 'service'])
     };
 })
 
-
+.config(function($ionicConfigProvider){
+    $ionicConfigProvider.scrolling.jsScrolling(false);
+})
 
 .config(function($stateProvider, $urlRouterProvider){
 

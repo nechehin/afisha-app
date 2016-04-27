@@ -23,6 +23,11 @@ body{
     padding: 0;
 }
 
+.feed-item img{
+    width:80px;
+    height: 80px;
+}
+
 .item-complex .item-content{
     padding: 0;
 }

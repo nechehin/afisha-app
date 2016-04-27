@@ -54,34 +54,34 @@ angular.module('controllers', [])
 
     var articles = StorageHelper.getArticlesFromLocalStorage();
 
-    Articles.get($stateParams.articleId).then(function(data){
+    $scope.item = {};
 
-        articles.every(function(article, index){
-
-           if(article.id == $stateParams.articleId){
-
-               articles[index].content = data.content;
-               StorageHelper.save('articles', articles);
-               return false;
-
-           }else {
-               return true;
-           }
-
+    Articles.get($stateParams.articleId)
+        .then(function(article){
+            console.log(article);
+            $scope.item = article;
         });
 
-        $scope.item = data;
-    }).catch( function(err){
 
-        articles.every(function(article){
-           if(article.id == $stateParams.articleId ){
-               $scope.item = article;
-               return false;
-           }else{
-               return true;
-           }
-        });
+    $scope.$on("$ionicView.loaded", function(){
 
+        //console.log($scope.item);
+        //console.log(document.querySelector('ion-content'));
+        //document.querySelector('ion-content').innerHTML = $scope.item.content;
+        //initArticle(document.getElementsByClassName('content')[0]);
     });
 
+    //    .catch( function(err){
+    //
+    //    articles.every(function(article){
+    //       if(article.id == $stateParams.articleId ){
+
+    //           $scope.item = article;
+    //           return false;
+    //       }else{
+    //           return true;
+    //       }
+    //    });
+    //
+    //});
 });

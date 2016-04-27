@@ -2,46 +2,6 @@
 var service = angular.module('service', []);
 
 service
-.factory('Articles', function($http, $ionicPopup){
-
-    var items = [];
-
-    var url      = 'http://feeds.tochka.net/articles/items/';
-    var url_item = 'http://feeds.portal.spavor.dvdev.org.ua/articles/item/afisha/';
-    var dev_url  = 'http://feeds.portal.spavor.dvdev.org.ua/articles/items/afisha/';
-
-
-    url = dev_url;
-
-    return {
-        load: function(offset){
-
-            return $http.get(url+'?offset='+offset, {timeout: 70000}).then(function(response){
-                items = response.data;
-                return items;
-            }, function(){
-                $ionicPopup.alert({title: 'Connection error', content: 'Error with your connection'});
-                return [];
-            });
-        },
-
-        all: function(){
-            return items;
-        },
-
-        get: function(id){
-
-            return $http.get(url_item + id + '/?json', {timeout: 1000})
-                .then(function(response){
-                    return response.data;
-                }, function(response){
-                    $ionicPopup.alert({title: 'Connection error', content: 'Error with your connection'});
-                    return [];
-                });
-
-        }
-    }
-})
 .factory('StorageHelper', function($window){
     return {
 
@@ -104,4 +64,79 @@ service
         }
 
     };
-});
+})
+
+.factory('Articles',['StorageHelper', '$http', '$ionicPopup', function(StorageHelper, $http, $ionicPopup){
+
+    var items = [];
+
+    var url      = 'http://feeds.tochka.net/articles/items/';
+    var url_item      = 'http://feeds.tochka.net/articles/item/glamurchik/';
+    var dev_url_item = 'http://feeds.portal.spavor.dvdev.org.ua/articles/item/afisha/';
+    var dev_url  = 'http://feeds.portal.spavor.dvdev.org.ua/articles/items/afisha/';
+
+
+    url = dev_url;
+    url_item = dev_url_item;
+
+    return {
+        load: function(offset){
+
+            return $http.get(url+'?offset='+offset, {timeout: 70000}).then(function(response){
+                items = response.data;
+                return items;
+            }, function(){
+                $ionicPopup.alert({title: 'Connection error', content: 'Error with your connection'});
+                return [];
+            });
+        },
+
+        all: function(){
+            return items;
+        },
+
+        get: function(id){
+
+            //@todo return promise, resolve -> article, reject -> reject from $http.get
+            //return $q(function(resolve, reject){
+                return $http.get(url_item + id + '/?json')
+                    .then(function(response){
+
+                        articles = StorageHelper.getArticlesFromLocalStorage();
+
+                        curentArticle = null;
+
+                        articles = articles.map(function(article){
+                            if(article.id == id){
+                                article.content = response.data.content;
+                                curentArticle = article;
+                            }
+
+                            return article;
+                        });
+                        StorageHelper.save('articles', articles);
+
+                        return curentArticle;
+
+                    }, function(response){
+                        $ionicPopup.alert({title: 'Connection error', content: 'Error with your connection'});
+
+                        var articleFromCache = null;
+
+                        articles = StorageHelper.getArticlesFromLocalStorage();
+                        articles.every(function(article){
+                            if(article.id == id){
+                                articleFromCache = article;
+                                return false;
+                            }else{
+                                return true;
+                            }
+                        });
+
+                        return articleFromCache;
+                    });
+            //})
+
+        }
+    }
+}]);

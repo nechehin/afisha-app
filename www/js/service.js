@@ -76,8 +76,8 @@ service
     var dev_url  = 'http://feeds.portal.spavor.dvdev.org.ua/articles/items/afisha/';
 
 
-    url = dev_url;
-    url_item = dev_url_item;
+    //url = dev_url;
+    //url_item = dev_url_item;
 
     return {
         load: function(offset){

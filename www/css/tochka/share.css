@@ -1,0 +1,102 @@
+/**
+ * Tochka.share.panel
+ */
+
+.tochka-share {
+    
+}
+
+/* horizontal latout */
+.tochka-share.horisontal {
+   
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.tochka-share.horisontal .wrapper {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    border-collapse:separate;
+    border-spacing:5px;
+}
+
+.tochka-share.horisontal .btn {
+    display: table-cell;
+}
+
+/* buttons */
+.tochka-share .btn {
+    border-radius: 0;
+    color: #fff;
+    padding: 10px;
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.tochka-share .btn:hover {
+    opacity: 0.9;
+}
+
+.tochka-share.horisontal .btn .glyph{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    /*-webkit-text-stroke: initial;*/
+    -webkit-text-stroke: 1px rgba(255,255,255, 0.2);
+}
+
+.tochka-share.horisontal.withCounts .btn .glyph{
+    width: 50%;
+    text-align: left;
+}
+
+.tochka-share.horisontal .btn .count{
+    display: inline-block;
+    width: 50%;
+    text-align: right;
+    font-size: 16px;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 599px) {
+    
+    .tochka-share .btn {
+        padding: 8px 5px;
+    }
+    
+    .tochka-share.horisontal.withCounts .btn .glyph{
+        width: 100%;
+        text-align: center;
+    }
+    
+    .tochka-share.horisontal .btn .count{
+        display: none;
+    }
+    
+}
+
+.tochka-share .btn.facebook {
+    background: #3c5a99;
+}
+
+.tochka-share .btn.vkontakte {
+    background: #4d75a3;
+}
+
+.tochka-share .btn.twitter {
+    background: #5ea9dd;
+}
+
+.tochka-share .btn.pinterest {
+    background: #cf373d;
+}
+
+.tochka-share .btn.google {
+    background: #dd4b39;
+}
+
+.tochka-share .btn.ok {
+    background: #f58426;
+}

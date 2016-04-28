@@ -1,0 +1,476 @@
+/*sprite*/
+.tochka-rating.small em, .tochka-rating.small .button, .tochka-rating.middle>.group>span,
+.tochka-rating.middle>.group>span>em, .tochka-rating.middle .count em, .tochka-rating.normal .count em,
+.tochka-rating.stars .up, .tochka-rating.stars .up .button{
+    background-image: url('/images/gui/tochka-rating/sprite.png');
+    background-repeat: no-repeat;
+}
+.tochka-rating>.group{display: inline-block}
+
+/*small*/
+.tochka-rating.small>.group>span:first-child{margin-left: 0}
+.tochka-rating.small>.group>span{
+    float: left;
+    margin-left: 8px;
+    }
+    .tochka-rating.small .button{
+        float: left;
+        width: 24px; height: 18px;
+        cursor: pointer;
+        }
+
+    .tochka-rating.small .up>.button{background-position: 0 -169px}
+        .tochka-rating.small .up .button:hover,
+        .tochka-rating.small .up .button:active{cursor:pointer}
+        .tochka-rating.small .up .button:hover{background-position: 0 -197px}
+        .tochka-rating.small .up .button:active{background-position: 0 -225px}
+
+    .tochka-rating.small .down>.button{background-position: -34px -169px}
+        .tochka-rating.small .down .button:hover{background-position: -34px -197px}
+        .tochka-rating.small .down .button:active{background-position: -34px -225px}
+
+    .tochka-rating.small .disable .button{cursor: default !important}
+        .tochka-rating.small .up.disable .button{background-position: 0 -253px}
+        .tochka-rating.small .down.disable .button{background-position: -34px -253px}
+
+    .tochka-rating.small .count{
+        float: left;
+        background-color: #ffffff;
+        border: 1px solid #C0C0C0;
+        border-radius: 3px;
+        padding: 0 4px;
+        color: #323232;
+        font-size: 11px;
+        position: relative;
+        margin-left: 6px;
+        line-height: 16px;
+        }
+        .tochka-rating.small .count>em{
+            background-position: 0 -159px;
+            display: block;
+            width: 12px; height: 9px;
+            position: absolute;
+            top: 50%; left: -4px;
+            margin-top: -3px;
+        }
+
+/*middle*/
+.tochka-rating.middle .group{
+    display: inline-block;
+    width: 100%;
+}
+.tochka-rating.middle{
+    width:300px; height: 50px;
+    margin: 0 auto;
+    position: relative;
+    }
+    .tochka-rating.middle .button,
+    .tochka-rating.middle .up,
+    .tochka-rating.middle .down{
+        display: block;
+        width: 145px; height: 35px;
+        position: absolute;
+        min-width: 103px !important;
+    }
+    .tochka-rating.middle .up{
+        background-position: left -2px;
+        top: 0; left: -2px;
+        z-index: 2;
+        }
+        .tochka-rating.middle .up>em{
+            background-position: -352px -2px;
+            height: 35px;
+            position: absolute;
+            right: -24px;
+            width: 24px;
+        }
+        .tochka-rating.middle .up:hover{
+            background-position:  left -42px;
+            color: #ffffff;
+            cursor: pointer;
+
+            }
+            .tochka-rating.middle .up:hover>em{background-position: -352px -42px}
+        .tochka-rating.middle .up:active,
+        .tochka-rating.middle .up.disable{
+            background-position:  left -81px;
+            color: #ffffff;
+            cursor: pointer;
+            }
+        .tochka-rating.middle .up.disable{cursor: default}
+            .tochka-rating.middle .up:active>em,
+            .tochka-rating.middle .up.disable>em{
+                background-position: -352px -81px;
+            }
+
+        .tochka-rating.middle .up .button{
+            width: 100%;
+            z-index: 1;
+        }
+
+    .tochka-rating.middle .down{
+        background-position: right -2px;
+        top: 14px; right: -2px;
+        z-index: 1;
+        }
+        .tochka-rating.middle .down>em{
+            background-position: -422px -2px;
+            height: 35px;
+            left: -24px;
+            position: absolute;
+            width: 24px;
+        }
+        .tochka-rating.middle .down:hover{
+            background-position:  right -43px;
+            color: #ffffff;
+            cursor: pointer;
+            }
+            .tochka-rating.middle .down:hover>em{background-position: -422px -43px}
+
+        .tochka-rating.middle .down:active,
+        .tochka-rating.middle .down.disable{
+            background-position:  right -83px;
+            color: #ffffff;
+            cursor: pointer;
+            }
+        .tochka-rating.middle .down.disable{cursor: default}
+            .tochka-rating.middle .down:active>em,
+            .tochka-rating.middle .down.disable>em{
+                background-position: -422px -83px
+            }
+
+        .tochka-rating.middle .down .button{
+            width: 100%;
+            z-index: 1;
+        }
+
+    .tochka-rating.middle .count {
+        font-size: 14px;
+        position: absolute;
+        top: 6px;
+        }
+        .tochka-rating.middle .count span{display: inline-block}
+        .tochka-rating.middle .up .count{
+            display: block;
+            left: 45%;
+            margin-right: -25px;
+            }
+            .tochka-rating.middle .up .count span{
+                display: inline-block;
+                position: relative;
+                top: -2px;
+            }
+
+        .tochka-rating.middle .down .count{
+            display: block;
+            left: 45%;
+            margin-left: -25px;
+            top: 8px;
+            }
+            .tochka-rating.middle .down .count span{
+                display: inline-block;
+                position: relative;
+                top: -5px;
+            }
+
+            .tochka-rating.middle .up .count em,
+            .tochka-rating.middle .down .count em{
+                display: inline-block;
+                width: 16px; height: 18px;
+            }
+            .tochka-rating.middle .up .count em{
+                margin-right: 7px;
+                background-position: -70px -169px;
+                }
+                .tochka-rating.middle .up:hover .count em{background-position: -70px -197px}
+                .tochka-rating.middle .up:active .count em,
+                .tochka-rating.middle .up.disable .count em{
+                    background-position: -70px -197px
+                }
+
+            .tochka-rating.middle .down .count em{
+                margin-right: 7px;
+                background-position: -100px -169px;
+                }
+                .tochka-rating.middle .down:hover .count em{background-position: -100px -197px}
+                .tochka-rating.middle .down:active .count em,
+                .tochka-rating.middle .down.disable .count em{
+                    background-position: -100px -197px
+                }
+
+    /*normal*/
+    .tochka-rating.normal{color: #ffffff}
+        .tochka-rating.normal > .group {
+            width: 100%;
+            background-color: #E65555;
+            position: relative;
+            height: 21px;
+        }
+        .tochka-rating.normal .up,
+        .tochka-rating.normal .down{
+            width: 50%; height: 21px;
+            position: absolute;
+            }
+            .tochka-rating.normal .up span,
+            .tochka-rating.normal .down span{
+                display: inline-block;
+            }
+
+            .tochka-rating.normal .up{
+                left: 0;
+                background-color: #58CC52;
+            }
+            .tochka-rating.normal .down{
+                max-width: inherit !important;
+                right: 0;
+                width: auto !important;
+                text-align: right;
+            }
+    .tochka-rating.normal .count{
+        margin-left: 6px;
+        min-width: 22px;
+    }
+    .tochka-rating.normal .up .count{margin-left: 6px}
+    .tochka-rating.normal .down .count{margin-right: 6px;}
+        .tochka-rating.normal .count span{
+            display: inline-block;
+            position: relative;
+            top: -1px;
+        }
+
+        .tochka-rating.normal .up .count em,
+        .tochka-rating.normal .down .count em{
+            display: inline-block;
+            width: 10px; height: 12px;
+            margin-right: 5px;
+            margin-top: 4px;
+        }
+        .tochka-rating.normal .up .count em{
+            background-position: -136px -197px;
+        }
+        .tochka-rating.normal .down .count em{
+            background-position: -166px -197px;
+        }
+
+    .tochka-rating.normal .button {
+        cursor: pointer;
+        display: block;
+        height: 21px;
+        left: 6px;
+        position: absolute;
+        width: 100%;
+        z-index: 3;
+    }
+    .tochka-rating.normal .up .button {left: 6px}
+    .tochka-rating.normal .down .button{left: 0}
+    .tochka-rating.small .disable .button{cursor: default !important}
+
+    .tochka-rating.normal .button:hover + .count span{text-decoration: underline}
+    .tochka-rating.normal .disable .button:hover + .count span{text-decoration: none}
+    .tochka-rating.normal .disable .count span{font-weight: bold}
+    /*end:normal*/
+
+    /*stars*/
+.tochka-rating.stars{
+    display: inline-block;
+    width: 74px; height: 13px;
+    background-position: 0 -323px;
+    }
+    .tochka-rating.stars .count,
+    .tochka-rating.stars .up > em{display: none}
+
+    .tochka-rating.stars .up,
+    .tochka-rating.stars .up .button{display: block}
+
+    .tochka-rating.stars .up{
+        background-position: 0 -307px;
+        width: 74px;
+        height: 13px;
+        }
+        .tochka-rating.stars .up{cursor: pointer}
+        .tochka-rating.stars .up .button,
+        .tochka-rating.stars .up .button.disable{
+            background-position: 0 -323px;
+            height: 13px;
+            }
+            .tochka-rating.stars .up .button:hover{background-position: 0 -291px;}
+
+        .tochka-rating.stars .up.disable{cursor: default}
+            .tochka-rating.stars .up.disable .button:hover{background-position: 0 -323px}
+    /*end:stars*/
+
+
+
+    
+/* article gallery :: start */
+.gallery .tochka-rating {
+    font-size: 16px;
+    position: absolute;
+    top: -40px;
+    z-index: 1;
+    width: 100%;
+}
+
+
+.gallery .tochka-rating .group{
+    display: inherit;
+    text-align: center;
+}
+
+.gallery .tochka-rating .up,
+.gallery .tochka-rating .down {
+    background: rgba(255, 255, 255, 0.80);
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    padding: 8px 0 8px 2px;
+    margin:0 1px 0 10px;
+    cursor: pointer;
+}
+
+.gallery .tochka-rating .button {
+    border: 2px solid;
+    border-radius:  50%;
+    margin: 1px;
+    padding: 4px 7px 4px 7px;
+    min-height: inherit !important;
+    min-width:inherit !important;
+}
+
+.gallery .tochka-rating .text{
+    display: none;
+}
+
+.gallery .tochka-rating .up .button {
+    border-color: #4b9e2b;
+    color: #4b9e2b;
+}
+
+.gallery .tochka-rating .up:hover .button {
+    background-color: #4b9e2b;
+    color: white;
+}
+
+.gallery .tochka-rating .up:hover,
+.gallery .tochka-rating .down:hover {
+    background: rgba(255, 255, 255, 0.90);
+
+}
+
+.gallery .tochka-rating .down .button {
+    border-color: #e21a22;
+    color: #e21a22;
+}
+
+.gallery .tochka-rating .down:hover .button {
+    background-color: #e21a22;
+    color: #ffffff;
+}
+
+.gallery .tochka-rating .up.disable .button,
+.gallery .tochka-rating .down.disable .button {
+    color: #757575;
+    background-color: transparent;
+    border-color: #757575;
+    cursor: default;
+}
+
+.gallery .tochka-rating .down .glyph{
+    position: relative;
+    top: 2px;
+
+}
+
+.gallery .tochka-rating .count {
+    font-size: 18px;
+    font-weight: 700;
+    color: #757575;
+    padding: 0 11px 0 5px;
+
+}
+@media (max-width: 600px) {
+    .gallery .tochka-rating{
+        position: static;
+        padding: 15px;
+    }
+
+
+}
+
+/* fullscreen */
+
+.gallery.fullscreen .tochka-rating {
+    font-size: 25px;
+    top: 30px;
+    position: relative;
+    
+}
+.gallery.fullscreen .tochka-rating .group{
+    display: table;
+}
+.gallery.fullscreen .tochka-rating .up,
+.gallery.fullscreen .tochka-rating .down{
+    background: transparent;
+    width: 150px;
+    display: table-cell;
+}
+
+
+.gallery.fullscreen .tochka-rating .button{
+    padding: 5px 10px 5px 10px;
+
+}
+
+.gallery.fullscreen .tochka-rating .count{
+    color: #ffffff;
+    display: block;
+    margin-top: 47px;
+    padding: 0;
+
+}
+
+.gallery.fullscreen .tochka-rating .down .glyph{
+    top: 3px;
+}
+
+.gallery.fullscreen .tochka-rating .text{
+    font-size: 14px;
+    position: absolute;
+    display: inline-block;
+    top: 53px;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    font-weight: 600;
+    width: 150px;
+}
+
+.gallery .tochka-rating .up .text{
+    color: #4b9e2b;
+    left: 0px;
+}
+
+.gallery .tochka-rating .down .text{
+    color: #e21a22;
+    right: 0px;
+}
+
+.gallery .tochka-rating .up.disable .text,
+.gallery .tochka-rating .down.disable .text{
+    color: #757575;
+}
+/* article gallery :: end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+

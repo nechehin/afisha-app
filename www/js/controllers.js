@@ -65,23 +65,16 @@ angular.module('controllers', [])
 
     $scope.$on("$ionicView.loaded", function(){
 
-        //console.log($scope.item);
-        //console.log(document.querySelector('ion-content'));
-        //document.querySelector('ion-content').innerHTML = $scope.item.content;
-        //initArticle(document.getElementsByClassName('content')[0]);
+
+        var interval = setInterval(function(){
+
+            if(document.getElementsByClassName('content').length > 0){
+                initArticle(document.getElementsByClassName('content')[0]);
+                clearInterval(interval);
+            }
+
+        }, 100);
+
     });
 
-    //    .catch( function(err){
-    //
-    //    articles.every(function(article){
-    //       if(article.id == $stateParams.articleId ){
-
-    //           $scope.item = article;
-    //           return false;
-    //       }else{
-    //           return true;
-    //       }
-    //    });
-    //
-    //});
 });

@@ -1,0 +1,365 @@
+.Spectopic .col-lg-8 .Block:first-child{background: none;}
+.Spectopic .col-lg-8 .Block{
+    background: url("/images/line_dashed.png") repeat-x left top;
+    padding-top: 14px;
+    padding-bottom: 0;
+    margin-bottom: 15px;
+}
+
+.Spectopic .col-lg-8 .Block.Zeroing .B_inner{padding: 10px 0 0 0;}
+.Spectopic .col-lg-8 .B_header{
+    background: none;
+    border: none;
+    height: inherit;
+    padding-bottom: 0;
+    padding: 0 10px;
+}
+
+.Spectopic .col-lg-8 .B_header h1,
+.Spectopic .col-lg-8 .B_header h2,
+.Spectopic .col-lg-8 .B_header h3,
+.Spectopic .col-lg-8 .B_header h1>a,
+.Spectopic .col-lg-8 .B_header h2>a,
+.Spectopic .col-lg-8 .B_header h3>a{
+    font-family: 'GillSans';
+    font-size: 24px;
+    color: #2b302f;
+    text-shadow: none;
+}
+.Spectopic .col-lg-8 .B_header h3 > a em{
+    background-image: url(/images/framework2/block/sprite.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 9px;
+    height: 12px;
+    background-position: -9px 0;
+    margin-left: 7px;
+}
+
+/*Top-blockw*/
+.Spectopic .col-lg-8 .Top-block .B_header{
+    background-color: #f1f2f2;
+    padding: 8px 10px 12px;
+    text-align: center;
+}
+.Spectopic .Top-block .B_header h1{
+    font-family: 'GillSans';
+    font-size: 24px;
+    line-height: 24px;
+    float: none;
+    margin: 0;
+    padding: 0;
+}
+.Spectopic .Top-block .preview-box.info .panel > * {margin: 9px 12px 12px 12px;}
+.Spectopic .Top-block .preview-box a.image {
+    max-height: 305px;
+    overflow: hidden;
+    float: none;
+}
+
+.Spectopic .Top-block .preview-box .image img{
+    width: 660px;
+    height: auto;
+}
+
+@media (min-width: 640px) and (max-width: 1019px) {
+    .Spectopic .Top-block .preview-box .image img{
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 639px) {
+    .Spectopic .Top-block .preview-box .image img{
+        max-width: 100%;
+    }
+}
+
+
+.Spectopic .Top-block .preview-box .text h4 a{
+    font-family: 'GillSans';
+    font-size: 24px;
+    color: #ffffff
+}
+
+@media (max-width: 639px) {
+    .Spectopic .Top-block .preview-box .text h4 a{
+        font-size: 18px;
+    }
+}
+/*Top-block*/
+
+
+.Spectopic .btn-play {
+    background-image: url('http://i1.tchkcdn.com/afisha/images/sprite.png');
+    width: 68px;
+    height: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -34px;
+    margin-top: -35px;
+}
+
+/*NEWS-LINE*/
+.Spectopic .Block.News-line .preview-box .text h4{font-size: 24px;}
+.Spectopic .Block.News-line .preview-box .text h4 a{
+    font-family: 'GillSans';
+    line-height: 22px;
+    color: #424242;
+}
+.Spectopic .News-line .preview-box .text p a{font-size: 13px;}
+
+/*icon-box*/
+.Spectopic .News-line .preview-box .date{font-size: 12px;}
+.Spectopic .News-line .preview-box .text .date{color: #424242;}
+.Spectopic .Block.News-line .icon-box>a:hover{text-decoration: none;}
+.Spectopic .Block.News-line .icon-box>*>span{
+    font-size: 12px;
+    color: #b3b3b3;
+}
+
+.Spectopic .Block.News-line .icon-box > a:hover > span{text-decoration: none;}
+.Spectopic .Block.News-line .icon-box{margin-top: 7px;}
+
+/*icons*/
+.Lady.Spectopic .ic.comment.b3b3b3:hover{background-position: -50px 0;}
+.Lady.Spectopic .ic.photo.b3b3b3:hover{background-position: -50px -20px;}
+.Afisha.Spectopic .ic.comment.b3b3b3:hover{background-position: -460px 0;}
+.Afisha.Spectopic .ic.photo.b3b3b3:hover{background-position: -460px -20px;}
+.Travel.Spectopic .ic.comment.b3b3b3:hover{background-position: -540px 0;}
+.Travel.Spectopic .ic.photo.b3b3b3:hover{background-position: -540px -20px;}
+.Glamurchik.Spectopic .ic.comment.b3b3b3:hover{background-position: -300px 0;}
+.Glamurchik.Spectopic .ic.photo.b3b3b3:hover{background-position: -300px -20px;}
+.E-motion.Spectopic .ic.comment.b3b3b3:hover{background-position: -420px 0;}
+.E-motion.Spectopic .ic.photo.b3b3b3:hover{background-position: -420px -20px;}
+/*end:icons*/
+
+/*end:icon-box*/
+
+/*end:NEWS-LINE*/
+
+/*CAROUSEL*/
+
+.Spectopic .col-lg-8 .carousel.preview .pagination {
+    display: none;
+}
+/*carousel two*/
+.Spectopic .carousel.two {
+    margin: 0 10px;
+}
+.Spectopic .carousel.two .elements li:first-child {
+    margin-left: 0;
+}
+.Spectopic .carousel.two .elements li {
+    width: 316px;
+    margin-left: 10px;
+}
+.Spectopic .carousel.two .elements li .text:hover h4 a,
+.Spectopic .carousel.two .elements li .image:hover + .text h4 a {
+    text-decoration: underline;
+}
+.Spectopic .carousel.two .btn-prev.middle,
+.Spectopic .carousel.two .btn-next.middle{
+    top: 116px;
+}
+/*end:carousel two*/
+
+/*carousel three*/
+.Spectopic .carousel.three {
+    margin: 0 10px;
+}
+.Spectopic .carousel.three .elements li:first-child{margin-left: 0}
+.Spectopic .carousel.three .elements li{
+    width: 206px;
+    margin-left: 11px;
+}
+.Spectopic .carousel.three .elements li .title{color: #363636}
+.Spectopic .carousel.three .elements li .text{
+    height: 58px;
+    overflow: hidden;
+}
+.Spectopic .carousel.three .elements li .text:hover h4 a,
+.Spectopic .carousel.three .elements li .image:hover + .text h4 a{text-decoration: underline}
+
+.Spectopic .carousel.three .btn-prev.middle,
+.Spectopic .carousel.three .btn-next.middle{
+    top: 77px;
+}
+/*end:carousel three*/
+.Spectopic .carousel.preview .elements .mask {
+    margin-left: 0;
+}
+/*carousel description*/
+
+.Spectopic .carousel.two .text{
+    max-height: 68px;
+    margin-top: 3px;
+}
+.Spectopic .carousel.two .text h4{
+    font-family: 'GillSans';
+    font-size: 20px;
+}
+.Spectopic .carousel.two .text h4 a {
+    color: #424242;
+}
+
+.Spectopic .carousel.three .elements li .text{
+    max-height: 47px;
+    margin-top: 3px;
+}
+.Spectopic .carousel.three .text h4 a {
+    color: #333333;
+}
+/*end:carousel description*/
+
+/*buttons*/
+.Spectopic .col-lg-8 .carousel.preview .btn-prev.middle,
+.Spectopic .col-lg-8 .carousel.preview .btn-next.middle {
+    width: 22px;
+    height: 22px;
+    border: 2px solid #ffffff;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    position: absolute;
+    margin-top: -11px;
+}
+.Spectopic .col-lg-8 .carousel.preview.main .btn-prev.middle,
+.Spectopic .col-lg-8 .carousel.preview.main .btn-next.middle {
+    position: absolute;
+    top: 66px;
+}
+.Spectopic .col-lg-8 .carousel.preview .btn-prev.middle {
+    left: -12px;
+}
+.Spectopic .col-lg-8 .carousel.preview .btn-next.middle {
+    right: -11px;
+}
+.Spectopic .col-lg-8 .carousel .btn-prev.middle:active,
+.Spectopic .col-lg-8 .carousel .btn-next.middle:active{box-shadow: none;}
+.Spectopic .col-lg-8 .carousel .btn-next.middle em {
+    background-position: -29px -12px;
+    margin-left: 8px;
+}
+.Spectopic .col-lg-8 .carousel .btn-prev.middle em,
+.Spectopic .col-lg-8 .carousel .btn-next.middle em {
+    width: 8px;
+    height: 15px;
+    margin-top: 4px;
+}
+.Spectopic .col-lg-8 .carousel .btn-prev em,
+.Spectopic .col-lg-8 .carousel .btn-next em {
+    background-image: url('/images/framework2/carousel/sprite.png');
+    background-repeat: no-repeat;
+}
+.Spectopic .col-lg-8 .btn-prev.middle em {
+    background-position: -21px -12px;
+    margin-left: 8px;
+}
+.Spectopic .col-lg-8 .btn-next.middle em {
+    background-position: -28px -12px;
+    margin-left: 9px;
+}
+
+.Afisha.Spectopic .carousel.preview .btn-prev.middle,
+.Afisha.Spectopic .carousel.preview .btn-next.middle{background-color: #FD8100;}
+.Afisha.Spectopic .carousel.preview .btn-prev.middle:hover,
+.Afisha.Spectopic .carousel.preview .btn-next.middle:hover{background-color: #ff9c33;}
+.Travel.Spectopic .carousel.preview .btn-prev.middle,
+.Travel.Spectopic .carousel.preview .btn-next.middle{background-color: #349bc7;}
+.Travel.Spectopic .carousel.preview .btn-prev.middle:hover,
+.Travel.Spectopic .carousel.preview .btn-next.middle:hover{background-color: #39bce0;}
+.Lady.Spectopic .carousel.preview .btn-prev.middle,
+.Lady.Spectopic .carousel.preview .btn-next.middle{background-color: #CE3D3D;}
+.Lady.Spectopic .carousel.preview .btn-prev.middle:hover,
+.Lady.Spectopic .carousel.preview .btn-next.middle:hover{background-color: #E45050;}
+.Glamurchik.Spectopic .carousel.preview .btn-prev.middle,
+.Glamurchik.Spectopic .carousel.preview .btn-next.middle{background-color: #e7468f;}
+.Glamurchik.Spectopic .carousel.preview .btn-prev.middle:hover,
+.Glamurchik.Spectopic .carousel.preview .btn-next.middle:hover{background-color: #ff69ac;}
+.E-motion.Spectopic .carousel.preview .btn-prev.middle,
+.E-motion.Spectopic .carousel.preview .btn-next.middle{background-color: #924adb;}
+.E-motion.Spectopic .carousel.preview .btn-prev.middle:hover,
+.E-motion.Spectopic .carousel.preview .btn-next.middle:hover{background-color: #924adb;}
+/*end:buttons*/
+/*end:CAROUSEL*/
+
+.Spectopic .News-line .load-more {
+    float: left;
+    width: 100%;
+    background-color: #F1F2F2;
+    height: 34px;
+    line-height: 31px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0 20px;
+    cursor: pointer;
+    border-radius: 0 0 4px 4px;
+    position: relative;
+    font-size: 11px;
+}
+.Spectopic .News-line .load-more:hover{background-color: #ededed;}
+.Spectopic .News-line .load-more span {
+    color: #989898;
+    font-family: 'Arial', Helvetica, sans-serif;
+}
+.Spectopic .News-line .load-more .icon.pointer.down {
+    background-image: url('/images/framework2/links/sprite.png');
+    background-position: -86px -409px;
+    position: absolute;
+    display: block;
+    width: 11px;
+    height: 7px;
+    left: 50%;
+    bottom: -8px;
+    margin-left: -5px;
+}
+
+/*E-MOTION*/
+.E-motion.Spectopic main .preview-box {max-width: inherit;}
+.E-motion.Spectopic .col-lg-8 .Block {
+    padding-top: 14px;
+    background: none;
+    border-top: dotted 1px #808080;
+    margin-bottom: 12px;
+}
+.E-motion.Spectopic .col-lg-8 .Block:first-child{border-top: none;}
+.E-motion .col-lg-8 .B_header {
+    padding: 0 12px;
+    color: #ffffff;
+}
+.E-motion.Spectopic .col-lg-8 .B_header h1,
+.E-motion.Spectopic .col-lg-8 .B_header h2,
+.E-motion.Spectopic .col-lg-8 .B_header h3,
+.E-motion.Spectopic .col-lg-8 .B_header h1>a,
+.E-motion.Spectopic .col-lg-8 .B_header h2>a,
+.E-motion.Spectopic .col-lg-8 .B_header h3>a{
+    color: #ffffff;
+    text-transform: none;
+}
+.E-motion.Spectopic .col-lg-8 .Top-block .B_header h1{color: #2b302f;}
+
+.E-motion .carousel .elements .inner {width: auto;}
+.E-motion.Spectopic .carousel.two .text h4 a,
+.E-motion.Spectopic .carousel.three .text h4 a,
+.E-motion.Spectopic .News-line .text a,
+.E-motion.Spectopic .News-line .preview-box .text h4 a{color: #ffffff;}
+.E-motion.Spectopic .News-line .preview-box .date {color: #b2b2b2;}
+
+.E-motion.Spectopic .load-more{background: url("/emotion/images/BlockBg_1.png") repeat 0 0;}
+.E-motion.Spectopic .load-more > span{
+    font-family: 'Helvetica', Arial, sans-serif;
+    color: #808080;
+}
+/*end:E-MOTION*/
+
+/*Glamurchik*/
+.Glamurchik.Spectopic a.load-more:hover{color: #989898;}
+.Glamurchik.Spectopic .col-lg-8 .B_header h1,
+.Glamurchik.Spectopic .col-lg-8 .B_header h2,
+.Glamurchik.Spectopic .col-lg-8 .B_header h3{margin: 0;}
+.Glamurchik.Spectopic .col-lg-8 .B_header h1>a:hover,
+.Glamurchik.Spectopic .col-lg-8 .B_header h2>a:hover,
+.Glamurchik.Spectopic .col-lg-8 .B_header h3>a:hover{text-decoration: underline;}
+/*end: Glamurchik*/
+

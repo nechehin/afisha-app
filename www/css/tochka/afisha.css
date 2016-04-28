@@ -1,0 +1,75 @@
+.gallery.afisha, .gallery.afisha .group.thumbs .mask li a .photo-index{
+    background-color: #EEEEEE;
+}
+.gallery.afisha{margin-bottom: 10px}
+
+.gallery.afisha .middle{
+    border-radius: 0;
+}
+
+.gallery.afisha .thumbs .btn-view.open,
+.gallery.afisha .thumbs .btn-view.close{
+    border-radius: 0;
+}
+
+.gallery.afisha .middle:hover{
+    background-color: #f7671e;
+}
+
+.gallery.afisha .middle.disable{
+    background: none repeat scroll 0 0 #BBBBBB;
+    cursor: default;
+}
+
+.gallery.afisha .thumbs .btn-view.disable.open,
+.gallery.afisha .thumbs .btn-view.disable.close{
+    background: #f7671e;
+}
+
+.gallery.afisha .thumbs .ablock.item>span>span{
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.gallery.afisha .group.thumbs .mask li a:hover,
+.gallery.afisha .group.thumbs .mask li.selected a,
+.gallery.afisha .thumbs .ablock.item.selected>span,
+.gallery.afisha .thumbs .ablock.item:hover>span{
+    background-color: #f7671e;
+    /*border: 4px solid #f7671e;*/
+}
+
+.gallery.afisha .group.thumbs .mask li.selected{
+    background-position: 40px -278px
+}
+
+.gallery.afisha .elements .see-more .box:hover{
+    color: #f7671e
+}
+
+.gallery.afisha .elements .item img{
+    display: inline
+}
+
+.gallery.afisha .elements .mask{
+    margin: 0 3px 0 0
+}
+
+.gallery.afisha .group.elements .btn-next{
+    right: 0
+}
+
+.gallery.afisha .group.elements .btn-prev{
+    left: 0
+}
+
+/*gallery-popup*/
+.tochka-popup.gallery-popup .banner.vertical{
+    border: none;
+    box-shadow: 0;
+    }
+    .tochka-popup.gallery-popup .banner.vertical > div{
+        padding: 0;
+        background: none;
+    }
+/*end:gallery-popup*/

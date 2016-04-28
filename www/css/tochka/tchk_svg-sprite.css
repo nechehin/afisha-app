@@ -1,0 +1,304 @@
+/* Icons from directory "tchk_svgs" */
+*:not("button[ng-click]") .icon {
+    background: url(../../img/tchk_svgs.png) no-repeat; /* For IE 8*/
+    background: none,
+    url(../../img/tchk_svgs.png) no-repeat;
+    display: inline-block;
+}
+
+.icon.icon-arrow_large_left_gray {
+    background-position: 0 0;
+    width: 11px;
+    height: 18px;
+}
+.icon.icon-arrow_large_left_white{
+    background-position: 0 -18px;
+    width: 11px;
+    height: 18px;
+}
+.icon.icon-arrow_large_right_gray{
+    background-position: 0 -36px;
+    width: 11px;
+    height: 18px;
+}
+.icon.icon-arrow_large_right_white{
+    background-position: 0 -54px;
+    width: 11px;
+    height: 18px;
+}
+.icon.icon-arrow_small_down{
+    background-position: 0 -72px;
+    width: 11px;
+    height: 7px;
+}
+.icon.icon-arrow_small_down:hover{
+    background-position: 0 -79px;
+}
+.icon.icon-arrow_small_left{
+    background-position: 0 -86px;
+    width: 7px;
+    height: 11px;
+}
+.icon.icon-arrow_small_left:hover{
+    background-position: 0 -97px;
+}
+.icon.icon-arrow_small_right{
+    background-position: 0 -108px;
+    width: 7px;
+    height: 11px;
+}
+.icon.icon-arrow_small_right:hover{
+    background-position: 0 -119px;
+}
+.icon.icon-arrow_small_up{
+    background-position: 0 -130px;
+    width: 11px;
+    height: 7px;
+}
+.icon.icon-arrow_small_up:hover{
+    background-position: 0 -137px;
+}
+.icon.icon-article_comments{
+    background-position: 0 -144px;
+    width: 14px;
+    height: 13px;
+}
+.icon.icon-article_comments:hover{
+    background-position: 0 -157px;
+}
+.icon.icon-article_photos{
+    background-position: 0 -170px;
+    width: 15px;
+    height: 11px;
+}
+.icon.icon-article_photos:hover{
+    background-position: 0 -181px;
+}
+.icon.icon-checkmark{
+    background-position: 0 -192px;
+    width: 32px;
+    height: 32px;
+}
+.icon.icon-horo_bliznetsy{
+    background-position: 0 -224px;
+    width: 68px;
+    height: 68px;
+}
+.icon.icon-horo_bliznetsy:hover{
+    background-position: 0 -292px;
+}
+.icon.icon-horo_deva{
+    background-position: 0 -360px;
+    width: 68px;
+    height: 68px;
+}
+.icon.icon-horo_deva:hover{
+    background-position: 0 -428px;
+}
+.icon.icon-horo_kozerog{
+    background-position: 0 -496px;
+    width: 68px;
+    height: 68px;
+}
+.icon.icon-horo_kozerog:hover{
+    background-position: 0 -564px;
+}
+.icon.icon-horo_lev{
+    background-position: 0 -632px;
+    width: 68px;
+    height: 68px;
+}
+.icon.icon-horo_lev:hover{
+    background-position: 0 -700px;
+}
+.icon.icon-horo_oven{
+    background-position: 0 -768px;
+    width: 68px;
+    height: 68px;
+}
+.icon.icon-horo_oven:hover{
+    background-position: 0 -836px;
+}
+.icon.icon-horo_rak{
+    background-position: 0 -904px;
+    width: 68px;
+    height: 68px;
+}
+.icon.icon-horo_rak:hover{
+    background-position: 0 -972px;
+}
+.icon.icon-horo_ryby{
+    background-position: 0 -1040px;
+    width: 68px;
+    height: 68px;
+}
+.icon.icon-horo_ryby:hover{
+    background-position: 0 -1108px;
+}
+.icon.icon-horo_skorp{
+    background-position: 0 -1176px;
+    width: 68px;
+    height: 68px;
+}
+.icon.icon-horo_skorp:hover{
+    background-position: 0 -1244px;
+}
+.icon.icon-horo_strelets{
+    background-position: 0 -1312px;
+    width: 68px;
+    height: 68px;
+}
+.icon.icon-horo_strelets:hover{
+    background-position: 0 -1380px;
+}
+.icon.icon-horo_telets{
+    background-position: 0 -1448px;
+    width: 68px;
+    height: 68px;
+}
+.icon.icon-horo_telets:hover{
+    background-position: 0 -1516px;
+}
+.icon.icon-horo_vesy{
+    background-position: 0 -1584px;
+    width: 68px;
+    height: 68px;
+}
+.icon.icon-horo_vesy:hover{
+    background-position: 0 -1652px;
+}
+.icon.icon-horo_vodolei{
+    background-position: 0 -1720px;
+    width: 68px;
+    height: 68px;
+}
+.icon.icon-horo_vodolei:hover{
+    background-position: 0 -1788px;
+}
+.icon.icon-language{
+    background-position: 0 -1856px;
+    width: 20px;
+    height: 20px;
+}
+.icon.icon-language:hover{
+    background-position: 0 -1876px;
+}
+.icon.icon-loader{
+    background-position: 0 -1896px;
+    width: 20px;
+    height: 20px;
+}
+.icon.icon-mail_white{
+    background-position: 0 -1916px;
+    width: 18px;
+    height: 12px;
+}
+.icon.icon-menu_button{
+    background-position: 0 -1928px;
+    width: 20px;
+    height: 14px;
+}
+.icon.icon-menu_button_close{
+    background-position: 0 -1942px;
+    width: 16px;
+    height: 16px;
+}
+.icon.icon-plane{
+    background-position:0 -1958px;
+    width:21px;
+    height:24px;
+}
+.icon.icon-radio_button:hover{
+    background-position:0 -1982px;
+}
+.icon.icon-radio_button_idle{
+    background-position:0 -1998px;
+    width:16px;
+    height:16px;
+}
+.icon.icon-radio_button_selected{
+    background-position:0 -2014px;
+    width:16px;
+    height:16px;
+}
+.icon.icon-scroll_up:hover{
+    background-position:0 -2030px;
+    width:44px;
+    height:44px;
+}
+.icon.icon-search_button{
+    background-position:0 -2074px;
+    width:32px;
+    height:32px;
+}
+.icon.icon-search_button:hover{
+    background-position:0 -2106px;
+}
+.icon.icon-search_icon{
+    background-position:0 -2138px;
+    width:15px;
+    height:15px;
+}
+.icon.icon-search_icon:hover{
+    background-position:0 -2153px;
+}
+.icon.icon-socials_logo_android{
+    background-position:0 -2168px;
+    width:15px;
+    height:18px;
+}
+.icon.icon-socials_logo_facebook{
+    background-position:0 -2186px;
+    width:9px;
+    height:16px;
+}
+.icon.icon-socials_logo_gplus{
+    background-position:0 -2202px;
+    width:17px;
+    height:16px;
+}
+.icon.icon-socials_logo_instagram{
+    background-position:0 -2218px;
+    width:16px;
+    height:16px;
+}
+.icon.icon-socials_logo_twitter{
+    background-position:0 -2234px;
+    width:16px;
+    height:13px;
+}
+.icon.icon-socials_logo_vk{
+    background-position:0 -2247px;
+    width:19px;
+    height:11px;
+}
+.icon.icon-trending{
+    background-position:0 -2258px;
+    width:21px;
+    height:24px;
+}
+.icon.icon-user_auth{background-position:0 -2282px;
+    width:40px;
+    height:40px;
+}
+.icon.icon-user_auth:hover{
+    background-position:0 -2322px;
+}
+.icon.icon-user_auth_small{
+    background-position:0 -2362px;
+    width:32px;
+    height:32px;
+}
+.icon.icon-user_auth_small:hover{
+    background-position:0 -2394px;
+}
+.icon.icon-user_no_avatar{
+    background-position:0 -2426px;
+    width:40px;
+    height:40px;
+}
+.icon.icon-user_no_avatar_small{
+    background-position:0 -2466px;
+    width:32px;
+    height:32px;
+}

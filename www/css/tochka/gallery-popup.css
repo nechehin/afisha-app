@@ -1,0 +1,360 @@
+/*sprite*/
+.galleryPopup .bt-large, .galleryPopup .bt-middle, .galleryPopup .bt-small,
+.galleryPopup .bt-zoom, .galleryPopup .bt-prev em, .galleryPopup .bt-next em, .galleryPopup .carousel-box .LiCol .image:hover,
+.galleryPopup .carousel-box .LiCol.selected .image, .galleryPopup .NavButtons a{
+    background-image: url(/images/gui/gallery-popup/sprite.png);
+    background-repeat: no-repeat;
+}
+
+/*end:sprite*/
+/*galleryPopup*/
+.galleryPopup{
+    width: 936px; height: 656px;
+    background-color: #191919 !important;
+    padding: 12px;
+}
+
+.galleryPopup .left-box{
+    float: left;
+    width: 636px;
+    box-shadow: 1px 0 0 0 #3D3D3D;
+    padding-right: 11px;
+    margin-right: 10px;
+}
+
+.galleryPopup .right-box{
+    float: left;
+    width: 300px;
+}
+
+.galleryPopup .right-box .banner.vertical>div{
+    padding: 0
+}
+
+.galleryPopup .image-box{
+    width: 636px;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    min-height: 477px;
+}
+
+.galleryPopup .image-box table{
+    width: 636px;
+    height: 477px;
+}
+
+.galleryPopup .image-box img{
+    vertical-align: middle
+}
+
+.galleryPopup .image-box .bt-prev, .galleryPopup .image-box .bt-next{
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+}
+
+.galleryPopup .image-box .bt-prev{
+    left: 0
+}
+
+.galleryPopup .image-box .bt-next{
+    right: 0
+}
+
+/*top-box*/
+.galleryPopup .top-box{
+    border-bottom: 1px solid #3D3D3D;
+    margin-bottom: 12px;
+    padding-bottom: 13px;
+}
+
+.galleryPopup .top-box h3{
+    font-size: 20px;
+    color: #fff;
+    font-weight: normal;
+    margin: 0;
+    float: left;
+}
+
+/*end:top-box*/
+
+/*carousel-box*/
+.galleryPopup .carousel-box{
+    float: left;
+    width: 546px;
+    margin: -4px 0 2px -4px;
+    padding: 4px 0 8px 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.galleryPopup .carousel-box ul{
+    display: inline-block;
+}
+
+.galleryPopup .carousel-box .Li6{
+    margin: 0 -5px;
+    position: relative;
+}
+
+.galleryPopup .Li6 .LiCol{
+    margin: 0 5px;
+    width: 82px;
+    position: relative;
+    float: left;
+}
+
+.galleryPopup .carousel-box .Li6 .LiCol .image{
+    margin-bottom: -8px;
+    padding-bottom: 8px;
+    width: 82px;
+    height: 82px;
+}
+.galleryPopup .carousel-box .Li6 .LiCol .image{
+    display: block;
+    width: 82px; height: 82px;
+}
+
+.galleryPopup .carousel-box .Li6 .LiCol .image:hover,
+.galleryPopup .carousel-box .Li6 .LiCol.selected .image,
+.galleryPopup .carousel-box .end-gallery .image span{
+    background-position: 35px -174px;
+}
+
+.galleryPopup .carousel-box .Li6 .LiCol .image:hover img,
+.galleryPopup .carousel-box .Li6 .LiCol.selected .image img,
+.galleryPopup .carousel-box .end-gallery .image:hover span,
+.galleryPopup .carousel-box .end-gallery.selected .image span{
+    border: 4px solid #545454;
+    margin: -4px;
+}
+
+.galleryPopup .carousel-box .end-gallery{
+}
+
+.galleryPopup .carousel-box .end-gallery .image span{
+    display: inline-block;
+    padding-top: 35px;
+    width: 82px;
+    height: 47px;
+    background: #252525;
+    font-size: 11px;
+    color: #7c7c7c;
+    text-align: center;
+}
+
+.galleryPopup .carousel-box .preview_info{
+    display: block;
+    background: #2B2419;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    opacity: 0.8;
+    padding: 2px 6px;
+    position: absolute;
+    right: 0;
+    bottom: 8px;
+}
+
+.galleryPopup .NavButtons{
+    float: left;
+}
+
+.galleryPopup .NavButtons .bt-prev,
+.galleryPopup .NavButtons .bt-next{
+    float: left;
+    margin-left: 7px;
+}
+
+/*end:carousel-box*/
+
+/*info-box*/
+.galleryPopup .info-box{
+    background-color: #000000;
+    color: #FFFFFF;
+    font-size: 14px;
+    max-height: 61px;
+    line-height: 21px;
+    overflow: hidden;
+    padding: 3px 10px 7px;
+}
+
+.galleryPopup .info-box .author{
+    font-size: 13px;
+    padding-right: 10px;
+}
+
+.galleryPopup .info-box .source{
+    font-size: 13px;
+}
+
+.galleryPopup .info-box .source_link{
+    font-size: 13px;
+    text-decoration: underline;
+    color: #fff;
+}
+
+.galleryPopup .info-box .source_link:hover{
+    text-decoration: none;
+    color: #eb8f00;
+}
+
+.galleryPopup .info-box .description{
+    font-size: 14px;
+    display: block;
+
+}
+
+/*end:info-box*/
+
+/*buttons*/
+
+.galleryPopup .bt-large{
+    display: inline-block;
+    width: 38px;
+    height: 82px;
+    background-position: 0 0;
+}
+
+.galleryPopup .bt-large:hover{
+    background-position: -48px 0;
+}
+
+.galleryPopup .bt-large:active{
+    background-position: -96px 0;
+}
+
+.galleryPopup .bt-middle{
+    display: inline-block;
+    width: 38px;
+    height: 42px;
+    background-position: 0 -92px;
+}
+
+.galleryPopup .bt-middle:hover{
+    background-position: -48px -92px;
+}
+
+.galleryPopup .bt-middle:active{
+    background-position: -96px -92px;
+}
+
+.galleryPopup .bt-small{
+    display: inline-block;
+    width: 33px;
+    height: 32px;
+    background-position: 0 -144px;
+}
+
+.galleryPopup .bt-small:hover{
+    background-position: -48px -144px;
+}
+
+.galleryPopup .bt-small:active{
+    background-position: -96px -144px;
+}
+
+.galleryPopup .bt-zoom{
+    background-position: 0 -197px;
+    display: block;
+    height: 14px;
+    width: 15px;
+}
+
+.galleryPopup .bt-small .bt-zoom{
+    margin: 10px auto 0;
+}
+
+.galleryPopup .bt-prev em{
+    background-position: -48px -197px;
+    display: block;
+    width: 11px;
+    height: 13px;
+}
+
+.galleryPopup .bt-prev.bt-small em{
+    margin: 10px auto 0;
+}
+
+.galleryPopup .bt-prev.bt-middle em{
+    margin: 14px auto 0;
+}
+
+.galleryPopup .bt-prev.bt-large em{
+    margin: 35px auto 0;
+}
+
+.galleryPopup .bt-next em{
+    background-position: -95px -197px;
+    display: block;
+    width: 11px;
+    height: 13px;
+}
+
+.galleryPopup .bt-next.bt-small em{
+    margin: 10px auto 0;
+}
+
+.galleryPopup .bt-next.bt-middle em{
+    margin: 14px auto 0;
+}
+
+.galleryPopup .bt-next.bt-large em{
+    margin: 35px auto 0;
+}
+
+/*end:buttons*/
+
+/*see-other*/
+.galleryPopup .see-other{
+    background-color: #252525;
+    padding: 10px 12px 8px 12px;
+    display: inline-block;
+}
+
+.galleryPopup .see-other .title{
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    border-bottom: 1px solid #3d3d3d;
+    padding-bottom: 10px;
+    margin-bottom: 22px
+}
+
+.galleryPopup .see-other ul{
+    margin: -9px -9px 0;
+}
+
+.galleryPopup .see-other .thumbs-box{
+    float: left;
+    width: 190px;
+    color: white;
+    margin: 9px 10px;
+    height: 189px;
+    overflow: hidden;
+}
+
+.galleryPopup .see-other .thumbs-box .text{
+    display: inline-block;
+    font-size: 14px;
+    padding-top: 9px;
+    line-height: 18px;
+}
+
+.galleryPopup .see-other .thumbs-box .text a{
+    color: #fff;
+}
+
+.galleryPopup .see-other .thumbs-box .text a:hover{
+    color: #fff;
+    text-decoration: underline;
+}
+
+/*end:see-other*/
+/*end:galleryPopup*/
+
+/*fix*/
+.ie8 .galleryPopup .left-box{
+    border-right: 1px solid #3D3D3D;
+}

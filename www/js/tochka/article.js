@@ -424,7 +424,6 @@ function initGalleries(articleBox) {
     /**
      * Apply for all galeries in article
      */
-    console.log(articleBox);
     [].forEach.call(articleBox.getElementsByClassName('gallery'), function(galleryBox) {
 
         // store real count of slides
@@ -476,7 +475,7 @@ function initGalleries(articleBox) {
             ratingAsyncStorage.getAjaxConfig = function (keys) {
                 return {
                     type: 'post',
-                    url: '/rating/get/',
+                    url: 'http://tochka.net/rating/get/',
                     data: {
                         object_id: keys,
                         object_type: 'photo',

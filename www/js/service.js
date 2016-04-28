@@ -70,8 +70,8 @@ service
 
     var items = [];
 
-    var url      = 'http://feeds.tochka.net/articles/items/';
-    var url_item      = 'http://feeds.tochka.net/articles/item/glamurchik/';
+    var url      = 'http://feeds.tochka.net/articles/items/afisha';
+    var url_item      = 'http://feeds.tochka.net/articles/item/afisha/';
     var dev_url_item = 'http://feeds.portal.spavor.dvdev.org.ua/articles/item/afisha/';
     var dev_url  = 'http://feeds.portal.spavor.dvdev.org.ua/articles/items/afisha/';
 

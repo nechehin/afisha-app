@@ -1,0 +1,2599 @@
+.column.left,
+.column.right,
+.column.big {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/*sprite*/
+.Main .icon,
+main .icon,
+.preview-box .btn-play, 
+.Zeroing.Afisha-timetable .B_header,
+.Afisha-timetable .date-box em, 
+.Afisha-timetable .ajax-nav .prev, 
+.Afisha-timetable .ajax-nav .next, 
+.Afisha-timetable .no-info em,
+.tags-menu li>a, 
+.filterSearch .searchBox .autocomplete-box .bt_close, 
+.TV-programs.widget .filter-carousel, 
+.TV-programs.widget .channel-carousel .bt-prev em,
+.TV-programs.widget .channel-carousel .bt-next em, 
+.TV-programs.widget .filter-carousel li.selected,
+.TV-programs.widget .channel-carousel .marker.small.border-orange em{
+    background-image: url(/afisha/images/sprite.png);
+}
+
+.ie8 .Polls.widget .box, 
+.ie9 .Polls.widget .box, 
+.ie8 .preview-box.over-box .hidden{
+    background-image: url(/afisha/images/sp-ie-fix.png);
+}
+/*end:sprite*/
+
+a{color: #427dc0}
+    a:hover{text-decoration: underline}
+    a.bt:hover{text-decoration: none}
+
+/*block*/
+.Afisha .Block:first-child{
+    background: none;
+    padding-top: 0;
+}
+.Afisha .Block{
+    background: url(/afisha/images/line.jpg) repeat-x 0 0;
+    padding-top: 14px;
+}
+.B_header h1 .icon.glamurchik,
+.B_header h3 .icon.glamurchik{
+    position: relative;
+    top: 3px;
+    margin-right: 8px;
+    margin-top: -16px;
+}
+/*end:block*/
+
+/*bg-block*/
+.Afisha .bg-block{
+    background: url(/afisha/images/tv-show/bg-block.png) repeat;
+    background-color: inherit;
+    border: 0;
+}
+.Block.bg-block{padding-top: 0}
+.bg-block .B_inner,
+.bg-block .B_header{background-color: inherit}
+/*end:bg-block*/
+
+/*icon*/
+.icon{display: inline-block}
+.icon.pointer.down{
+    width: 10px; height: 5px;
+    background-position: 0 -88px;
+}
+.icon.glamurchik{
+    width: 25px; height: 27px;
+    background-position: 0 -123px;
+}
+/*end:icon*/
+
+/*small*/
+.btn-prev.small, .btn-next.small{
+    width: 19px; height: 19px;
+}
+.btn-prev.small em, .btn-next.small em{
+    width: 6px; height: 9px;
+    margin: 5px auto auto;
+}
+.btn-next.small em{background-position: -20px -79px}
+.btn-prev.small em{background-position: 0 -79px}
+
+/*small*/
+
+/*button*/
+.bt.normal{font-weight: normal}
+/*end:button*/
+
+/*elements*/
+.places_loader {
+    display:none;
+    background:#fff url(/article/images/loader_102.gif) no-repeat 50% 150px;
+    opacity:0.5;
+    width:100%; height:100%;
+    position:absolute;
+    top: 0; left: 0;
+    z-index:10;
+    filter:alpha(opacity=50);
+}
+
+/*load-more*/
+.load-more{
+    float: left;
+    width: 100%;
+    background-color: #EDEEEE;
+    height: 34px;
+    line-height: 31px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 2px 0 0;
+    cursor: pointer;
+    border-radius: 0 0 4px 4px;
+    position: relative;
+}
+.load-more span{
+    font-size: 11px;
+    color:#989898;
+}
+.load-more:hover{
+    background-color: #f8f9f9;
+    text-decoration: none;
+}
+.load-more:hover span{
+    color:#a6a6a6;
+    text-decoration: underline;
+}
+.load-more .icon.pointer.down{
+    position: absolute;
+    left: 50%; bottom: -6px;
+    margin-left: -5px;
+}
+
+.load-more .line{
+    margin-bottom: 0;
+}
+/*end:load-more*/
+
+/*preview-box btn-play*/
+.preview-box .btn-play{
+    width: 68px; height: 70px;
+    position: absolute;
+    top:50%; left: 50%;
+    margin-left: -34px;
+    margin-top: -35px;
+}
+/*end:elements*/
+
+
+/*icon-box*/
+.icon-box > a:hover > span{
+    text-decoration: underline;
+}
+.icon-box > * > span {
+    color: #999999;
+}
+/*end:icon-box*/
+
+/*gSlider*/
+.gSlider>ul>li>a:hover + .gSliderText .title a{
+    text-decoration: underline;
+}
+
+.gSlider .SliderBackground {
+    background: #000000;
+    width: 250px; height: 308px;
+    position: absolute;
+    right: 0; bottom: 0;
+    z-index: 0;
+}
+.gSlider ul.anythingBase {
+    position:relative;
+}
+.gSlider ul.anythingBase li.panel {
+    background-color: transparent;
+}
+.gSlider .gSliderText {
+    position:relative; z-index:2;
+}
+.gSlider .gSliderText:hover a {
+    text-decoration:underline;
+}
+.gSlider .gSliderText:hover a.bt {text-decoration: none;}
+.gSlider div.anythingSlider .arrow a:hover {
+    background-color:#ff7b12;
+}
+.gSlider div.anythingSlider .arrow a span  {
+    background-image:  url(/afisha/images/arrSliderAfisha.png)!important;
+}
+.gSlider div.anythingSlider .forward a{
+    padding-left:15px;
+}
+.gSlider div.anythingSlider .back a {
+    padding-right:15px;
+}
+.gSlider div.anythingSlider .forward a.hover span{
+    background-position: 0 -31px!important;
+}
+.gSlider div.anythingSlider .forward a.hover:hover span {
+    background-position: 0 -93px!important;
+}
+.gSlider div.anythingSlider .back a.hover span{
+    background-position: 0 0!important;
+}
+.gSlider div.anythingSlider .back a.hover:hover span {
+    background-position: 0 -62px!important;
+}
+.gSlider div.anythingSlider .thumbNav  {
+    bottom:15px;
+    top:auto;
+    left:421px;
+    z-index:3;
+}
+.gSlider div.anythingSlider .thumbNav a {
+    width:9px;
+    height:9px;
+}
+.gSlider div.anythingSlider .thumbNav a.cur  {
+    width:11px;
+    height:11px;
+    margin-top:0;
+}
+.gSlider div.anythingSlider .thumbNav li {
+    padding-left:5px;
+}
+.gSlider div.anythingSlider .thumbNav.gLoader a.cur  {
+    background-position: 50%;
+}
+.gSlider .gSliderText {
+    width:220px;
+}
+.gSlider .gSliderText .CathegoryTitle {
+    color:#d5d5d5;
+    font-size:11px;
+    margin:0;
+    padding:0 0 4px 0;
+    text-transform:uppercase;
+}
+.gSlider .gSliderText .CathegoryTitle a {
+    color:#d5d5d5;
+}
+.gSlider .gSliderText .title {
+    font-size:18px;
+    font-weight: normal;
+    color:#fe7020;
+}
+.gSlider .gSliderText .title a{display: inline-block}
+.gSlider .gSliderText .title a,
+.gSlider .gSliderText .title a:hover {
+    color:#fe7020;
+}
+.gSlider .gSliderText .text {
+    color:#fff;
+}
+.gSlider .gSliderText .date a,.gSlider .gSliderText .text a {
+    color:#fff;
+}
+.gSlider .gSliderText .date {padding-bottom:15px; font-size:14px; font-weight:normal; color:#fff;}
+
+
+.gSlider div.anythingSlider .arrow {opacity: 1}
+.gSlider div.anythingSlider .arrow a {opacity:0.4}
+    .gSlider div.anythingSlider .arrow a:hover {
+        cursor:pointer;
+        opacity: 1;
+    }
+
+.gSliderCarusel div.anythingSlider .arrow a span,
+.ArticleCarousel .NavButtons a {
+    background-image:  url(/afisha/images/arrSliderCarusel.png);
+    cursor:pointer;
+}
+.gSliderCarusel div.anythingSlider .thumbNav {top:-26px}
+    .gSliderCarusel div.anythingSlider .thumbNav a {background:#e2e8ea}
+        .gSliderCarusel div.anythingSlider .thumbNav a.cur {background-color:#b6b6b6}
+
+.ie .gSlider div.anythingSlider .arrow {filter: alpha(opacity=100)}
+    .ie .gSlider div.anythingSlider .arrow a  {filter: alpha(opacity=40)}
+        .ie .gSlider div.anythingSlider .arrow a:hover {filter: alpha(opacity=100)}
+        .ie .gSlider div.anythingSlider .arrow:hover {filter: alpha(opacity=100)}
+
+.gSliderCarusel{
+    padding-top: 0;
+    overflow: visible;
+}
+/*end:gSlider*/
+
+/*el*/
+.AfishaReports .text .title,
+.LeftColNews .text .title,
+.RightColNews .text .title,
+.BlockDiscounts .title {
+    color: #fe6918;
+    font-size: 11px;
+    line-height: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/*end:el*/
+
+
+/*Top10Gallery*/
+.Top10Gallery {position: relative}
+.Top10Gallery .image .next, .Top10Gallery .image .prev{
+    display: block;
+    background: url(/images/gui/Top10Gallery/sprite.png) 10px center no-repeat;
+    width: 150px; height: 480px;
+    position: absolute;
+    top:10px;
+    z-index: 4;
+    opacity: 0.3;
+    }
+    .Top10Gallery .image .prev{left: 10px;}
+    .Top10Gallery .image .next{
+        background-position: -460px center;
+        right: 10px;
+    }
+.Top10Gallery .image .next:hover, .Top10Gallery .image .prev:hover{opacity: 1;}
+.Top10Gallery > div > .image {
+    float: none;
+    text-align: center;
+    height: 480px;
+    padding: 10px;
+    background-color: #F1F2F2;
+}
+.Top10Gallery .image td{height: 480px}
+.Top10Gallery .image div{
+    display: inline-block;
+    max-width: 640px;
+    overflow: hidden;
+}
+
+.Top10Gallery .text{padding: 0}
+.Top10Gallery .text .phototitle{
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 10px;
+}
+.Top10Gallery .Paginator{
+    background-color: #F1F2F2;
+    margin: -5px 0 10px;
+    padding: 0 10px 5px 10px;
+}
+.Top10Gallery .Paginator .NormalCasual{margin: 5px 0}
+.Top10Gallery .Paginator .NormalCasual.active, .Top10Gallery .Paginator .NormalCasual.active:active {
+    background-position: 0 -79px !important;
+    text-shadow: none;
+    border: none;
+    margin: 0 1px;
+}
+.Top10Gallery .Paginator .NormalCasual.active span{color: #fff !important}
+
+.Top10Gallery .slider_end_box{
+    background: url("/images/gui/opacity8.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 390px;
+    left: 10px;
+    padding: 90px 60px 0;
+    position: absolute;
+    top: 10px;
+    width: 520px;
+}
+.Top10Gallery .slider_end_box h3 {
+    border-bottom: 2px solid #FD7712;
+    color: #FFFFFF;
+    font-size: 18px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+}
+.Top10Gallery .slider_end_box .box {
+    float: left;
+    margin-right: 20px;
+    position: relative;
+    width: 250px;
+    z-index: 5;
+}
+.Top10Gallery .slider_end_box .box .image{
+    display: inline-block;
+    background-color: #f0f0f0;
+    margin-bottom: 7px;
+    }
+    .Top10Gallery .slider_end_box .box .image:hover + .text h4 a{text-decoration: underline}
+.Top10Gallery .slider_end_box .box h4{
+    font-size: 15px;
+    font-weight: normal;
+    padding-left: 57px;
+}
+.Top10Gallery .slider_end_box .box h4 a{
+    color: #fff;
+}
+.Top10Gallery .slider_end_box .box .number{
+    background-color: #FE730C;
+    border-radius: 3px;
+    color: #FFFFFF;
+    float: left;
+    font-size: 24px;
+    margin-right: 10px;
+    min-width: 27px;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+/*end:Top10Gallery*/
+
+/*.VideoPreview .image:hover + .text h4 a,
+.PhotoPreview .image:hover + .text h4 a {
+    text-decoration: underline;
+}*/
+
+.CalendarGalleryItem {
+    width:165px !important;
+    height:195px !important;
+    float:left;
+    margin-left:16px;
+    display:block;
+}
+.CalendarGalleryItem .TechInfo {
+    font-size:12px;
+}
+.CalendarGalleryItem a {
+    font-weight:bold;
+    font-size:13px;
+}
+.CalendarGalleryItem a:hover {
+    color:#005083;
+}
+.CalendarGalleryItem:first-child {
+    margin-left:57px;
+}
+.CalendarGalleryItem .title {
+    font-size:16px;
+    font-weight:bold;
+    margin:0 0 9px 0;
+    padding:0;
+}
+.CalendarGalleryItem .title a:hover,.CalendarGalleryItem .text a:hover,.CalendarGalleryItem .image:hover + .text a{
+    text-decoration:underline;
+}
+.CalendarGalleryItem .image {
+    display:block;
+    margin-bottom:5px;
+    height:108px;
+    overflow:hidden;
+}
+.CalendarGalleryItem .text {
+    width:160px;
+    display:block;
+}
+
+/*end:MainGallery*/
+
+/*AfishaCalendar*/
+.AfishaCalendar,
+.AfishaCalendar * {
+    box-sizing: content-box;
+}
+.AfishaCalendar .Carousel-box{
+    height: 42px;
+    overflow: hidden;
+    padding: 0 43px;
+    position: relative;
+}
+.AfishaCalendar .Carusel ul{
+    position: relative;
+    width: 100000px;
+    overflow:hidden;
+}
+.AfishaCalendar .Carusel li.LiCol:first-child{border-left: none}
+.AfishaCalendar .Carusel li.LiCol {vertical-align:top;}
+
+.AfishaCalendar .Carusel li.LiCol a {
+    display:inline-block;
+    color:#000;
+    font-size:17px;
+    font-weight:700;
+    text-transform:uppercase;
+    border-left:1px solid #f0f0f0;
+    border-right:1px solid #d7d9db;
+    padding:9px 11px 12px;
+
+    line-height:18px;
+    text-shadow:0 1px 0 #f8f8f8;
+
+    background:#dfdfdf;
+    background:-moz-linear-gradient(top, #f3f3f3 0%, #dfdfdf 100%);
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f3), color-stop(100%,#dfdfdf));
+    background:-webkit-linear-gradient(top, #f3f3f3 0%,#dfdfdf 100%);
+    background:-o-linear-gradient(top, #f3f3f3 0%,#dfdfdf 100%);
+    background:-ms-linear-gradient(top, #f3f3f3 0%,#dfdfdf 100%);
+
+    background:linear-gradient(to bottom, #f3f3f3 0%,#dfdfdf 100%);
+}
+.ie .AfishaCalendar .Carusel li.LiCol a {
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#dfdfdf',GradientType=0 );
+}
+
+.mac .AfishaCalendar .Carusel li.LiCol a {padding-bottom:14px}
+.AfishaCalendar .Carusel li.LiCol a:hover {
+    text-decoration:none;
+    background:#eaeaea;
+    background:-moz-linear-gradient(top, #f8f8f8 0%, #eaeaea 100%);
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#eaeaea));
+    background:-webkit-linear-gradient(top, #f8f8f8 0%,#eaeaea 100%);
+    background:-o-linear-gradient(top, #f8f8f8 0%,#eaeaea 100%);
+    background:-ms-linear-gradient(top, #f8f8f8 0%,#eaeaea 100%);
+    background:linear-gradient(to bottom, #f8f8f8 0%,#eaeaea 100%);
+}
+.AfishaCalendar .Carusel li.LiCol a:hover {
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#eaeaea',GradientType=0 );
+}
+.AfishaCalendar .Carusel li.LiCol a:active {
+    background:#ececec;
+    background:-moz-linear-gradient(top, #dedede 0%, #ececec 100%);
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#dedede), color-stop(100%,#ececec));
+    background:-webkit-linear-gradient(top, #dedede 0%,#ececec 100%);
+    background:-o-linear-gradient(top, #dedede 0%,#ececec 100%);
+    background:-ms-linear-gradient(top, #dedede 0%,#ececec 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#dedede', endColorstr='#ececec',GradientType=0 );
+    background:linear-gradient(top, #dedede 0%,#ececec 100%);
+    text-decoration:none;
+}
+.AfishaCalendar .Carusel li.LiCol a .marker {
+    font-weight: normal;
+    position: relative;
+    text-shadow: none;
+    top: 5px;
+}
+
+.AfishaCalendar .Carusel li.LiCol.current a,.AfishaCalendar .Carusel li.LiCol.current a:hover{
+    background:#fff;
+    border-left-color:#fff;
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
+}
+.AfishaCalendar .Carusel li.LiCol.inactive a,.AfishaCalendar .Carusel li.LiCol.inactive a:hover {
+    background:#dfdfdf;
+    background:-moz-linear-gradient(top, #f3f3f3 0%, #dfdfdf 100%);
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f3), color-stop(100%,#dfdfdf));
+    background:-webkit-linear-gradient(top, #f3f3f3 0%,#dfdfdf 100%);
+    background:-o-linear-gradient(top, #f3f3f3 0%,#dfdfdf 100%);
+    background:-ms-linear-gradient(top, #f3f3f3 0%,#dfdfdf 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#dfdfdf',GradientType=0 );
+    background:linear-gradient(top, #f3f3f3 0%,#dfdfdf 100%);
+    text-decoration:none;
+    color:#a6a6a6;
+    cursor:default;
+}
+.AfishaCalendar .Carusel li.LiCol .weekend {
+    color:#ff4f00;
+}
+
+.AfishaCalendar .BlockCalendarGallery div.anythingSlider .thumbNav {
+    display: none;
+    right: 0;
+    top: -71px;
+}
+
+.AfishaCalendar .Carusel li.LiCol.current .weekend {
+    color:#000000;
+}
+.AfishaCalendar .Carusel li.LiCol.current .weekend sup {
+    color:#ff4f00;
+}
+.AfishaCalendar .Carusel li.LiCol a sup {
+    font-weight:normal;
+    font-size:11px;
+    margin-top:-3px;
+}
+.AfishaCalendar .CalandarShedow {
+    width:38px;
+    height:42px;
+    position:absolute;
+    right:44px;
+    top:0;
+    background:  url(/afisha/images/CalendarShadow.png) no-repeat 100% 0;
+}
+.AfishaCalendar .NavButtons a{
+    display: inline-block;
+    position:absolute;
+    margin:0;
+    background:  url(/afisha/images/arrCalendarCarusel.png) 0 0 no-repeat;
+    width:49px;
+    height:42px;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.AfishaCalendar .NavButtons .BtnPrev {
+    left:0;
+    top:0;
+    border-right:1px solid #d7d9db;
+}
+.AfishaCalendar .NavButtons .BtnPrev:hover {
+    background-position:0 -42px;
+}
+.AfishaCalendar .NavButtons .BtnPrev:active {
+    background-position:0 -84px;
+}
+.AfishaCalendar .NavButtons .BtnPrev.inactive {
+    background-position:0 -126px;
+    cursor:default;
+}
+.AfishaCalendar .NavButtons .BtnNext {
+    top:0; right:0;
+    background-position:-50px 0;
+    border-left:1px solid #d7d9db;
+}
+.AfishaCalendar .NavButtons .BtnNext:hover {
+    background-position:-50px -42px;
+}
+.AfishaCalendar .NavButtons .BtnNext:active {
+    background-position:-50px -84px;
+}
+.AfishaCalendar .NavButtons .BtnNext.inactive {
+    background-position:-50px -126px;
+    cursor:default;
+}
+.BlockCalendarGallery {
+    padding-top:0;
+    width: 660px;
+}
+
+.BlockCalendarGallery div.anythingSlider .anythingWindow{height: 100% !important;}
+.BlockCalendarGallery div.anythingSlider {
+    padding-top: 1px;
+}
+.AfishaCalendar .BlockCalendarGallery {
+    position:absolute;
+    background-color: #F1F2F2;
+}
+
+.BlockCalendarGallery {width:660px}
+.BlockCalendarGallery div.anythingSlider .arrow {
+    height:100%;
+    width:49px;
+    top:0;
+    background-color:#f5f5f5;
+}
+.BlockCalendarGallery div.anythingSlider .arrow a {height:100%}
+.BlockCalendarGallery div.anythingSlider .back {
+    right:auto;
+    left:0;
+    z-index: 1;
+    display: block;
+}
+.BlockCalendarGallery div.anythingSlider .forward {
+    right:0;
+}
+.BlockCalendarGallery div.anythingSlider .arrow a span {
+    background:  url(/afisha/images/arrGallery.png) no-repeat;
+    height:14px;
+    width:9px;
+    position:absolute;
+    cursor:pointer;
+}
+.BlockCalendarGallery div.anythingSlider .back a span {
+    background-position:0 -71px;
+    top:50%;
+    margin-top:-7px;
+    left:19px;
+}
+.BlockCalendarGallery div.anythingSlider .arrow a:hover {
+    background:#ebebeb;
+}
+.BlockCalendarGallery div.anythingSlider .back a:hover {
+    /*border-right:1px solid #e4e4e4;*/
+}
+.BlockCalendarGallery div.anythingSlider .forward a:hover {
+    /*border-left:1px solid #e4e4e4;*/
+}
+.BlockCalendarGallery div.anythingSlider .back a:hover span,.BlockCalendarGallery div.anythingSlider .back a.hover:hover span,.BlockCalendarGallery div.anythingSlider .back a:active span {
+    background-position:0 -93px;
+}
+.BlockCalendarGallery div.anythingSlider .back a.hover span {
+    background-position:0 -71px;
+}
+.BlockCalendarGallery div.anythingSlider .back a.inactive {
+    cursor:default;
+}
+
+.BlockCalendarGallery div.anythingSlider .back a.inactive span,.BlockCalendarGallery div.anythingSlider .back a.inactive:hover span {
+    background-position:0 -115px;
+}
+.BlockCalendarGallery div.anythingSlider .forward  a span {
+    background-position:0 -5px;
+    top:50%;
+    margin-top:-7px;
+    right:19px;
+}
+.BlockCalendarGallery div.anythingSlider .forward  a:hover span,.BlockCalendarGallery div.anythingSlider .forward  a.hover:hover span,.BlockCalendarGallery div.anythingSlider .forward  a:active span {
+    background-position:0 -27px;
+}
+.BlockCalendarGallery div.anythingSlider .forward  a.hover span {
+    background-position:0 -5px;
+}
+.BlockCalendarGallery div.anythingSlider .forward  a.inactive {
+    cursor:default;
+}
+.BlockCalendarGallery div.anythingSlider .forward  a.inactive span,.BlockCalendarGallery div.anythingSlider .forward  a.inactive:hover span{
+    background-position:0 -49px;
+    cursor:default;
+}
+
+.BlockCalendarGallery .preview-box:first-child {margin-left: 53px}
+.BlockCalendarGallery .preview-box {
+    float:left;
+    width:182px !important; height: 170px !important;
+    margin-left:4px;
+    margin-top: 20px;
+    }
+    .BlockCalendarGallery .preview-box .image{
+        width:182px !important;
+        height: 150px !important;
+    }
+    .BlockCalendarGallery .priview-box .text h4 a {font-size: 14px}
+/*end:AfishaCalendar*/
+
+/*AfishaReports*/
+.AfishaReports {
+    width: 660px;
+}
+.AfishaReports .LiCol .preview-box .text h4 {padding: 5px 0}
+    .AfishaReports .LiCol2 .preview-box .text h4 {
+        float: left;
+        width: 260px;
+        padding: 0;
+    }
+/*end:AfishaReports*/
+
+/* VideoLine */
+/* end VideoLine */
+
+/**************************/
+.Col2_News .first_col {
+    background-color:#f9f9f9;
+    float:left;
+    width:215px;
+    border-right:1px solid #dddddd;
+    border-bottom:1px solid #dddddd;
+    -webkit-box-shadow:1px 1px 2px #f1f1f1;
+    box-shadow:1px 1px 2px #f1f1f1;
+}
+.Col2_News .first_col .TechInfo {
+    padding:12px 0 4px 0;
+    display:block;
+}
+.Col2_News .last_col {
+    float:left;
+    width:443px;
+}
+.Col2_News .content {
+    padding:12px 0;
+}
+.Col2_News .content .title, .Col2_Topic .content .title {
+    font-size:18px;
+    font-weight:bold;
+    color:#192125;
+    float:left;
+}
+.Col2_News .last_col .NavButtons {
+    margin-top:2px;
+}
+.Col2_News .last_col .Carusel {
+    margin-top:12px;
+}
+.Col2_News .last_col .Li2 .LiCol {
+    width:204px;
+}
+.Col2_News .last_col .PhotoPreview {
+    margin-top:12px;
+}
+.Col2_News .last_col .PhotoPreview .text {
+    padding-left:154px;
+}
+.Col2_News .last_col .PhotoPreview .Date {
+    margin:0;
+    display:inline;
+}
+.Col2_News .last_col .PhotoPreview .text h4 {
+    font-size:14px;
+    font-weight:bold;
+}
+.Col2_News .last_col .PhotoPreview .text p {
+    margin:6px 0;
+}
+
+.Col2_News .first_col {
+    display:none;
+}
+.Col2_News .last_col {
+    float:none;
+    width:auto;
+}
+
+.Col2_News .last_col .PhotoPreview {
+    position:relative;
+}
+.Col2_News .preview-box:first-child{margin-left: 0}
+.Col2_News .preview-box{
+    margin-left: 15px;
+    width: 210px;
+}
+.Col2_News .preview-box .text h4{padding: 5px 0}
+.Col2_News .preview-box .text .icon-box>*{font-size: 12px}
+/**************************/
+
+/*Recent-posts*/
+.Recent-posts .left{width:424px}
+    .Recent-posts .left .preview-box:first-child{margin-top: 0}
+    .Recent-posts .left .preview-box{
+        margin-top: 20px;
+        overflow: hidden;
+        }
+        .Recent-posts .left .preview-box .text h4{
+            font-size: 16px;
+            margin-top: 0;
+            position: relative;
+            top: -2px;
+        }
+.Recent-posts .right{
+    width: 204px;
+    background-color: #F1F2F2;
+    padding: 10px;
+    }
+    .Recent-posts .right .preview-box:first-child{margin-top: 0}
+        .Recent-posts .right .preview-box{margin-top:15px}
+            .Recent-posts .right .preview-box .text{padding: 5px 0 0}
+
+/*end:Recent-posts*/
+
+/*LeftColNews && RightColNews*/
+.LeftColNews {
+
+}
+.RightColNews {
+    float: right;
+    width: 204px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+}
+/*end:LeftColNews && RightColNews*/
+
+/*Article-preview*/
+.Block.Article-preview{border: none;}
+.Article-preview .B_inner{
+    background: #232323;
+    }
+    .Article-preview .preview-box .text h4{padding: 5px 0 0}
+    .Article-preview .preview-box .text h4 a{color: #ffffff}
+/*end:Article-preview*/
+
+/*NotMissedWidget*/
+.NotMissedWidget .preview-box:first-child{margin-top: 0}
+.NotMissedWidget .preview-box{margin-top: 10px}
+.NotMissedWidget .preview-box .image{z-index: 1}
+.NotMissedWidget .preview-box .text{
+    position: relative;
+    top: -5px
+    }
+    .NotMissedWidget .preview-box .text h4{padding: 5px 0}
+/*end:NotMissedWidget*/
+
+/*LastComments*/
+
+.LastComments .preview-box:first-child{margin-top: 0}
+.LastComments .preview-box{margin-top: 10px}
+
+.LastComments .info {
+    position:relative;
+    border:1px solid #d3d3d3;
+    background:#fff;
+    margin-top:9px;
+    display:block;
+    color:#7b7a7a;
+    font-style:italic;
+    padding:9px 11px 11px;
+    box-shadow:0 0 1px #fff;
+    }
+    .LastComments .info:hover {
+        background:#daeefb;
+        color:#4c97c7;
+        border-color:#bbe0f9;
+        text-decoration:none;
+    }
+.LastComments .info p {
+    margin:0;
+    padding:0;
+}
+.LastComments .info .pointer {
+    background:  url(/afisha/images/arrComments.png) no-repeat 0 0;
+    height:9px;
+    overflow:hidden;
+    position:absolute;
+    width:15px;
+    left:69px;
+    top:-9px;
+    display:block;
+    }
+    .LastComments .info:hover .pointer {background-position: 0-9px}
+
+/*end:LastComments*/
+
+/*sortActicleMenu*/
+.sortActicleMenu{
+    background: none repeat scroll 0 0 #F5F5F5;
+    border: 1px solid #DDE3E7;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
+}
+.sortActicleMenu ul{margin-left: -4px;}
+.sortActicleMenu li{
+    display: block;
+    float: left;
+    font-size: 10px;
+    left: 4px;
+    margin-bottom: -7px;
+    margin-left: 3px;
+    position: relative;
+    top: -1px;
+    z-index: 3;
+}
+.sortActicleMenu li:first-child{margin-left: 0}
+.sortActicleMenu li:first-child a{
+    margin-left: -1px;
+    width: 93px;
+}
+.sortActicleMenu li a{
+    display:block;
+    width:92px; height:41px;
+    text-align:center;
+    text-transform:uppercase;
+    padding-top:54px;
+    color: #404040;
+    font-weight:700;
+}
+.sortActicleMenu li a:hover{text-decoration: none;}
+.sortActicleMenu li a span{margin-left: -3px}
+
+.ie .sortActicleMenu li a:active{background-color: #F5F5F5}
+/*icons*/
+.sortActicleMenu .bt_all, .sortActicleMenu .bt_love, .sortActicleMenu .bt_wheel-chair,
+.sortActicleMenu .bt_reading, .sortActicleMenu .bt_ball, .sortActicleMenu .bt_cocktail,
+.sortActicleMenu .bt_gift{
+    background-image: url(/afisha/images/sortActicleMenu_sp.png);
+    background-repeat: no-repeat;
+}
+
+.sortActicleMenu .bt_all{
+    background-position: 0 -23px;
+}
+.sortActicleMenu .bt_all:hover{
+    background-position: 0 -121px;
+    color: #9eb941;
+}
+.sortActicleMenu .selected .bt_all,
+.sortActicleMenu .selected .bt_all:hover{
+    background-position: 0 -237px;
+    color:#fff;
+}
+.sortActicleMenu .selected span{
+    margin-left: -3px;
+}
+
+.sortActicleMenu .bt_love{
+    background-position: -98px -23px;
+}
+.sortActicleMenu .bt_love:hover{
+    background-position: -99px -121px;
+    color:#e3657a;
+}
+.sortActicleMenu .selected .bt_love,
+.sortActicleMenu .selected .bt_love:hover{
+    background-position: -98px -237px;
+    color:#fff;
+}
+.sortActicleMenu .selected .bt_love span{
+    /*padding-left: -1px;*/
+}
+
+.sortActicleMenu .bt_wheel-chair{
+    background-position: -196px -23px;
+}
+.sortActicleMenu .bt_wheel-chair:hover{
+    background-position: -197px -121px;
+    color:#3cabb5;
+}
+.sortActicleMenu .selected .bt_wheel-chair,
+.sortActicleMenu .selected .bt_wheel-chair:hover{
+    background-position: -196px -237px;
+    color:#fff;
+}
+
+.sortActicleMenu .bt_ball{
+    background-position: -295px -23px;
+}
+.sortActicleMenu .bt_ball:hover{
+    background-position: -295px -121px;
+    color:#3a8e54;
+}
+.sortActicleMenu .selected .bt_ball,
+.sortActicleMenu .selected .bt_ball:hover{
+    background-position: -294px -237px;
+    color:#fff;
+}
+
+
+.sortActicleMenu .bt_reading{
+    background-position: -391px -23px;
+}
+.sortActicleMenu .bt_reading:hover{
+    background-position: -391px -121px;
+    color:#6f54b2;
+}
+.sortActicleMenu .selected .bt_reading,
+.sortActicleMenu .selected .bt_reading:hover{
+    background-position: -392px -237px;
+    color:#fff;
+}
+
+.sortActicleMenu .bt_cocktail{
+    background-position: -491px -23px;
+}
+.sortActicleMenu .bt_cocktail:hover{
+    background-position: -491px -121px;
+    color:#c7458e;
+}
+.sortActicleMenu .selected .bt_cocktail,
+.sortActicleMenu .selected .bt_cocktail:hover{
+    background-position: -490px -237px;
+    color:#fff;
+}
+
+.sortActicleMenu .bt_gift{
+    background-position: -587px -23px;
+}
+.sortActicleMenu .bt_gift:hover{
+    background-position: -587px -121px;
+    color:#f76900;
+}
+.sortActicleMenu .selected .bt_gift,
+.sortActicleMenu .selected .bt_gift:hover{
+    background-position: -587px -237px;
+    color:#fff;
+}
+
+/*icons*/
+/*end sortActicleMenu*/
+
+/*RecomHP*/
+.Afisha .RecomHP{
+    margin-bottom: 0 !important;
+    width: 660px;
+}
+
+.Afisha .RecomHP,
+.Afisha .RecomHP *{
+    box-sizing: content-box;
+}
+
+.RecomHP #li_more{margin-top:-10px; margin-bottom:-3px;}
+
+.RecomHP .News-line .preview-box .text p{
+    padding-left: 80px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.RecomHP .preview-box .title{
+    width: 80px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.RecomHP .category{
+    display: block;
+    font-size: 11px;
+    margin-bottom: 10px;
+    position: relative;
+    text-transform: uppercase;
+    top: -2px;
+}
+.RecomHP .love {color: #e76f83;}
+.RecomHP .wheel-chair {color: #2fa4af;}
+.RecomHP .ball {color: #2f9b50;}
+.RecomHP .reading {color: #8770c2;}
+.RecomHP .cocktail {color: #c7458e;}
+.RecomHP .gift {color: #eb7f00;}
+/*end RecomHP*/
+
+
+/*searchBox*/
+.searchBox .B_inner{
+    padding: 2px;
+    position: relative;
+    z-index: 2;
+}
+.searchBox .autocomplete-box{
+    position: relative;
+    padding-right: 20px;
+}
+
+.searchBox .autocomplete-box .bt_close{
+    width: 10px; height: 10px;
+    background-image: url(/afisha/images/icAfisha_sp.png);
+    background-repeat: no-repeat;
+    background-position: 3px -87px;
+
+    padding: 3px;
+    position: absolute;
+    top:7px; right: 4px;
+}
+.searchBox .autocomplete-box .bt_close:hover{
+    background-position: 3px -117px;
+    background-color: #8ba0ac;
+}
+.searchBox .autocomplete-box input{
+    padding: 5px 10px;
+    width: 100%;
+    border: 1px solid #c8cccf;
+    border-right:0;
+    background-color: #fff;
+    outline: none;
+}
+.searchBox .autocomplete-box .ui-autocomplete{
+    border: 1px solid #c8cccf;
+    border-top:0;
+}
+.searchBox .autocomplete-box .ui-menu{
+    max-height: 185px;
+    overflow: auto;
+    padding: 1px;
+}
+.searchBox .autocomplete-box .ui-menu-item a {
+    color:#363636;
+    padding: 3px 10px;
+    line-height: normal;
+    font-size: 15px;
+}
+.searchBox .autocomplete-box .ui-state-hover,
+.searchBox .autocomplete-box .ui-state-focus{
+    border: 1px solid #F2E4C2;
+    background:#fff3e2;
+    box-shadow: 0 1px 0 0 #ffffff inset;
+}
+.searchBox .bt.orange{min-width: 70px}
+    .searchBox .bt.orange span{
+        position: relative;
+        top: -2px;
+    }
+    .searchBox .bt.orange .ic-search-white{
+        position: relative;
+        top: 5px;
+    }
+.searchBox .bt-show-hide{
+    margin-bottom: 2px;
+    border-bottom:1px dotted #005083
+}
+.searchBox .bt-show-hide:hover{
+    text-decoration: none;
+    border-bottom: none;
+    padding-bottom:1px;
+}
+.Afisha .BigColumn .searchBox .aSearchInfo {margin-bottom:0}
+/*fix ie9*/
+.ie9 .searchBox .autocomplete-box input{padding: 7px 10px 6px 10px}
+.ie9 .searchBox .autocomplete-box .ui-menu .ui-menu-item a {font-family:Arial, Helvetica, sans-serif}
+.ie9 .searchBox .autocomplete-box .ui-menu{max-height: 187px}
+/*end:fix ie9*/
+
+/*end searchBox*/
+
+/*aCategory*/
+.aCategory {
+    width: 660px;
+}
+.aCategory,
+.aCategory *{
+    box-sizing: content-box;
+}
+.aCategory table {width:100%}
+.aCategory .tCat td {
+    width: 100px; height: 80px;
+    vertical-align: middle;
+    text-align: center;
+}
+.aCategory .tCat td a{cursor: pointer}
+.aCategory .tCat td span {
+    color: #000000;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    padding-bottom: 1px;
+    padding-top: 10px;
+    text-shadow: 0 1px 0 #FFFFFF;
+    text-transform: uppercase;
+}
+.aCategory .tCat td em {
+    background:url(/afisha/images/spriteCat.png) no-repeat;
+    margin: 0 auto;
+    height:35px;
+    display: block;
+}
+.aCategory .tCat td a:hover {
+    text-decoration:none;
+}
+.aCategory .tCat td a.active {
+    display: block;
+    margin-bottom:-3px;
+}
+
+.aCategory .tCat .cat_0 a span {
+    display: block;
+    padding: 0;
+}
+
+.aCategory .tCat .cat_0 a.active{
+    border-bottom: 3px solid #F0560E;
+    display: inline-block;
+    margin-bottom: 0;
+    padding-bottom: 3px;
+}
+
+.aCategory .tCat .cat_0 a:hover span,
+.aCategory .tCat .cat_0 a.active span{
+    color:#f0560e;
+
+}
+
+.aCategory .tCat .cat_1 em {
+    background-position:center 0px;
+    width:19px;
+    display: block;
+}
+
+.aCategory .tCat .cat_1 a.active em,
+.aCategory .tCat .cat_1 a:hover em {
+    background-position:center -45px;
+}
+.aCategory .tCat .cat_1 a:hover span {
+    color:#ee7787;
+}
+
+.aCategory .tCat .cat_1 a.active span {
+    color:#ee7787;
+    border-bottom:3px solid #ee7787;
+}
+.aCategory .tCat .cat_3 em {
+    background-position:center -90px;
+    width:34px;
+}
+.aCategory .tCat .cat_3 a:hover em {
+    background-position:center -135px;
+}
+.aCategory .tCat .cat_3 a:hover span {
+    color:#1983cd;
+}
+.aCategory .tCat .cat_3 a.active em {
+    background-position:center -135px;
+}
+.aCategory .tCat .cat_3 a.active span {
+    color:#1983cd;
+    border-bottom:3px solid #1983cd;
+}
+.aCategory .tCat .cat_4 em {
+    background-position:center -180px;
+    width:31px;
+}
+.aCategory .tCat .cat_4 a:hover em {
+    background-position:center -225px;
+}
+.aCategory .tCat .cat_4 a:hover span {
+    color:#45b762;
+}
+.aCategory .tCat .cat_4 a.active em {
+    background-position:center -225px;
+}
+.aCategory .tCat .cat_4 a.active span {
+    color:#45b762;
+    border-bottom:3px solid #45b762;
+}
+.aCategory .tCat .cat_2 em {
+    background-position:center -270px;
+    width:53px;
+}
+.aCategory .tCat .cat_2 a:hover em {
+    background-position:center -315px;
+}
+.aCategory .tCat .cat_2 a:hover span {
+    color:#9856c1;
+}
+.aCategory .tCat .cat_2 a.active em {
+    background-position:center -315px;
+}
+.aCategory .tCat .cat_2 a.active span {
+    color:#9856c1;
+    border-bottom:3px solid #9856c1;
+}
+.aCategory .tCat .cat_6 em {
+    background-position:center -360px;
+    width:31px;
+}
+.aCategory .tCat .cat_6 a:hover em {
+    background-position:center -405px;
+}
+.aCategory .tCat .cat_6 a:hover span {
+    color:#00a7b8;
+}
+.aCategory .tCat .cat_6 a.active em {
+    background-position:center -405px;
+}
+.aCategory .tCat .cat_6 a.active span {
+    color:#00a7b8;
+    border-bottom:3px solid #00a7b8;
+}
+.aCategory .tCat .cat_5 em {
+    background-position:center -450px;
+    width:30px;
+}
+.aCategory .tCat .cat_5 a:hover em {
+    background-position:center -495px;
+}
+.aCategory .tCat .cat_5 a:hover span {
+    color:#d362ad;
+}
+.aCategory .tCat .cat_5 a.active em {
+    background-position:center -495px;
+}
+.aCategory .tCat .cat_5 a.active span {
+    color:#d362ad;
+    border-bottom:3px solid #d362ad;
+}
+.aCategory .tCat .cat_7 em {
+    background-position:center -540px;
+    width:36px;
+    height:37px;
+}
+.aCategory .tCat .cat_7 a:hover em {
+    background-position:center -585px;
+}
+.aCategory .tCat .cat_7 a:hover span {
+    color:#ed4800;
+}
+.aCategory .tCat .cat_8 em {
+    background-position:center -636px;
+    width:34px;
+    height:37px;
+}
+.aCategory .tCat .cat_8 a:hover em {
+    background-position:center -686px;
+}
+.aCategory .tCat .cat_8 a:hover span {
+    color:#ed4800;
+}
+.aCategory .tCat .cat_6{
+    border-right:1px solid #dde3e7;
+}
+.aCategory .tCat .cat_7{
+    border-left:1px solid #ffffff;
+}
+.aCategory_more .tCat {
+    margin-left: -3px;
+}
+.aCategory_sub {
+    padding:0px 8px;
+}
+.aCategory_sub .tCat_sub td {
+    vertical-align:top;
+    padding:15px 7px;
+}
+.aCategory_sub .tCat_sub td ul{
+    display: block !important;
+}
+.aCategory_sub .tCat_sub li {
+    padding:4px 0;
+}
+.aCategory .title {
+    font-size:14px;
+    font-weight:bold;
+    padding-bottom:10px;
+}
+.aCategory label {
+    padding-left:9px;
+    display:inline-block;
+}
+.aCategory_sub .tCat_sub .aCat_add li {
+    padding: 10px 0;
+}
+.tCat_sub .hide {
+    display:none;
+    background-color:#f5f5f5;
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    z-index:4;
+}
+
+.inactive {
+    position:relative;
+    z-index: 3
+}
+
+.inactive .hide {
+    display:block;
+}
+.aCat_more {
+    border-bottom:1px dotted #005083;
+    margin-top:8px;
+    display:inline-block;
+}
+.aCat_more:hover {
+    text-decoration:none;
+    border:none;
+    margin-bottom:1px;
+}
+.inactive .aCat_more {
+    border:none;
+    color:#272727;
+}
+.aCat_add {
+    padding:15px 15px 15px 8px;
+    border-top: 1px solid #DDE3E7;
+}
+.aCat_add .aCat_more {
+    margin-top:5px;
+}
+.aCat_add .title {
+    padding-left:7px;
+}
+.aCat_add table {
+    width:100%;
+}
+.aCat_add table td {
+    padding:0 7px;
+    vertical-align:middle;
+}
+.aCat_add label span {
+    padding-left:10px;
+    display:inline-block;
+    vertical-align:middle;
+}
+div.aCat_add label span {
+    width:128px;
+}
+
+.aCat_add .aCategory label {
+    vertical-align:middle;
+}
+.aCat_add div.formst.checkboxForm {
+    vertical-align:-3px;
+}
+.aCat_arr {
+    background:url(/afisha/images/aCat_arr.gif) 0 0 no-repeat;
+    position:absolute;
+    display:none;
+    width:25px;
+    height:10px;
+    left:50%;
+    margin-left:-12px;
+    bottom:-11px;
+}
+.aCategory_more .B_inner {position:relative}
+.aCategory_more .aCat_arr {display:block}
+/*end:aCategory*/
+
+/*BestPlaces*/
+.BestPlaces{
+    width: 660px;
+    overflow: hidden;
+}
+.BestPlaces .B_inner {padding:0}
+.BestPlaces .gSliderCarusel div.anythingSlider .thumbNav {right: 0}
+.BlockCalendarGallery .preview-box{width: 182px}
+
+.BestPlaces #slider3, .BlockDiscounts #sliderDiscounts,
+.BlockDiscounts #slider_report,
+.BlockConcurs #sliderConcurs {
+    width:10000px;
+}
+.BestPlaces .BestPlaces_Items ul{margin-left: 0}
+.BestPlaces #slider3 li {
+    width: 634px;
+    float:left;
+}
+.BlockDiscounts #sliderDiscounts li, .BlockDiscounts #slider_report li {
+    width:308px;
+    float:left;
+}
+
+.BlockConcurs #sliderConcurs li {
+    width:302px;
+    float:left;
+}
+.BestPlaces_Items {
+    float: left;
+    margin-left: 20px;
+    padding-bottom: 16px;
+    padding-top: 12px;
+    width: 165px;
+}
+.BestPlaces_Items:first-child {
+    margin-left:60px;
+}
+.BestPlaces .BestPlaces_Items .title, .BestPlaces .BestPlaces_Items .title a{
+    font-size:18px;
+    color:#fe6b18;
+    padding-bottom:5px;
+}
+.BestPlaces_Items ul{margin-left: 20px}
+.BestPlaces_Items ul li {
+    list-style-type:decimal;
+    padding:7px 0;
+    float:none !important;
+    width:auto !important;
+}
+/*end:BestPlaces*/
+
+/*BestPlaceWidget*/
+.BestPlaceWidget .preview-box:first-child{margin-top: 0}
+.BestPlaceWidget .preview-box .text .part{
+    color: #FF6A00;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+/*end:BestPlaceWidget*/
+
+
+/*EventReports*/
+.EventReports p {
+    margin-bottom:3px;
+}
+.EventReports .date {
+    font-size:13px;
+    color:#929292;
+    display:block;
+    margin-bottom:6px;
+}
+.NewsList .date  {
+    font-size:12px;
+    color:#929292;
+    display:inline-block;
+    display:inline!ie;
+    zoom:1!ie;
+    margin-bottom:6px;
+}
+.EventReports .title1,.NewsList .title1 {
+    font-size:11px;
+    color:#FE6918 !important;
+    line-height: 12px;
+    text-transform: uppercase;
+}
+
+.EventReports li,.NewsList li {margin-bottom:27px;}
+/*end:EventReports*/
+
+/* Ivent Calenar */
+.AfishaCalendar .sortMonth {
+    position:relative;
+}
+.AfishaCalendar .sortMonth .Carousel-box {
+    border: 1px solid #d7d8d9;
+    padding: 0 43px;
+    margin-right: 62px;
+    height: 42px;
+    position: relative;
+    overflow: hidden;
+}
+
+.AfishaCalendar .sortMonth .Carousel-box .Carusel{overflow: hidden;}
+
+.AfishaCalendar .sortMonth .NavButtons a{
+    position:absolute;
+    margin:0;
+    background:  url(/afisha/images/arrCalendarCarusel.gif) no-repeat;
+    width:43px;
+    height:42px;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.AfishaCalendar .sortMonth .NavButtons .BtnPrev {
+    left:0;
+    top:0;
+    border-right:1px solid #d7d9db;
+}
+.AfishaCalendar .sortMonth .NavButtons .BtnPrev:hover {
+    background-position:0 -42px;
+}
+.AfishaCalendar .sortMonth .NavButtons .BtnPrev:active {
+    background-position:0 -84px;
+}
+.AfishaCalendar .sortMonth .NavButtons .BtnPrev.inactive {
+    background-position:0 -126px;
+    cursor:default;
+}
+.AfishaCalendar .sortMonth .NavButtons .BtnNext {
+    right:0;
+    top:0;
+    background-position:-43px 0;
+    border-left:1px solid #d7d9db;
+}
+.AfishaCalendar .sortMonth .NavButtons .BtnNext:hover {
+    background-position:-43px -42px;
+}
+.AfishaCalendar .sortMonth .NavButtons .BtnNext:active {
+    background-position:-43px -84px;
+}
+.AfishaCalendar .sortMonth .NavButtons .BtnNext.inactive {
+    background-position:-43px -126px;
+    cursor:default;
+}
+.CalendarDatepicker {
+    display:inline-block;
+    zoom:1!ie;
+    position:relative;
+}
+.AfishaCalendar .sortMonth .CalendarDatepicker {
+    position:absolute;
+    right:15px;
+    display:block;
+    width:46px;
+    height:44px;
+}
+.AfishaCalendar .sortMonth .CalendarDatepicker img {
+    cursor:pointer;
+}
+.AfishaCalendar .sortMonth .CalendarDatepicker input {
+    border:0;
+    margin:0;
+    padding:0;
+    background:transparent;
+    cursor:pointer;
+    display:none;
+}
+.Afisha .ui-datepicker {
+    z-index:10!important;
+    margin-top:45px;
+    background:#fff;
+    box-shadow:none; /* Параметры тени */
+    -moz-box-shadow:none; /* Для Firefox */
+    -webkit-box-shadow: none; /* Для Safari и Chrome */
+    padding:0;
+    border:1px solid #d7d7d7;
+}
+.Afisha .ui-datepicker .ui-widget-header {
+    background:  url(/afisha/images/header_calendar.gif) repeat-x;
+    margin:-1px;
+    border:1px solid #dde3e7;
+    height:34px;
+    padding:0;
+}
+.Afisha .ui-widget-content {
+    color:#9e9e9e;
+}
+.Afisha .ui-datepicker-title {
+    color:#fffefe;
+
+    font-size:12px;
+    text-transform:uppercase;
+    line-height:34px;
+}
+.Afisha .ui-datepicker .ui-datepicker-prev,
+.Afisha  .ui-datepicker .ui-datepicker-next {
+    top:0;
+    height:100%;
+    width:23px;
+}
+.Afisha .ui-datepicker .ui-datepicker-prev {
+    border:none!important;
+    border-right:1px solid #515151!important;
+    left:0!important;
+    cursor:pointer;
+}
+.Afisha .ui-datepicker .ui-datepicker-next {
+    border:none!important;
+    border-left:1px solid #515151!important;
+    right:0!important;
+    cursor:pointer;
+}
+.Afisha .ui-datepicker .ui-datepicker-prev span,.Afisha  .ui-datepicker .ui-datepicker-next span {
+    margin-top:-17px;
+}
+.Afisha .ui-datepicker .ui-datepicker-prev span {margin-left:-11px;}
+
+.Afisha .ui-datepicker .ui-datepicker-next span {margin-left:-11px;}
+
+.Afisha .ui-icon {
+    height:34px;
+    width:23px;
+    background-image:  url(/afisha/images/arr_datepicker.gif);
+}
+
+.Afisha .ui-datepicker .ui-datepicker-prev .ui-icon {
+    background-position:0 0;
+}
+.Afisha .ui-datepicker .ui-datepicker-next .ui-icon {
+    background-position:100% 0;
+}
+.Afisha .ui-datepicker .ui-datepicker-prev-hover  .ui-icon {
+    background-position:0 -34px;
+}
+.Afisha .ui-datepicker .ui-datepicker-next-hover .ui-icon {
+    background-position:100% -34px;
+}
+.Afisha .ui-datepicker .ui-datepicker-prev-inactive  .ui-icon {
+    background-position:0 -68px;
+    cursor:default;
+}
+.Afisha .ui-datepicker .ui-datepicker-next-inactive .ui-icon {
+    background-position:100% -68px;
+    cursor:default;
+}
+
+.Afisha .ui-datepicker .ui-state-default,.Afisha .ui-datepicker .ui-widget-content .ui-state-default,.Afisha .ui-datepicker .ui-widget-header .ui-state-default {
+    border:none;
+    text-align:center;
+    padding:6px 2px;
+}
+.Afisha .ui-state-selected,.Afisha  .ui-widget-content .ui-state-selected,.Afisha  .ui-widget-header .ui-state-selected,.Afisha .ui-state-selected:hover,.Afisha  .ui-widget-content .ui-state-selected:hover,.Afisha  .ui-widget-header .ui-state-selected:hover {
+    background:#fe6918!important;
+    color:#fff!important;
+    margin:0!important;
+    z-index:2!important;
+    position:relative!important;
+
+}
+.Afisha .ui-state-active,
+.Afisha  .ui-widget-content .ui-state-active,
+.Afisha  .ui-widget-header .ui-state-active,
+.Afisha .ui-state-active:hover,
+.Afisha  .ui-widget-content .ui-state-active:hover,
+.Afisha  .ui-widget-header
+.ui-state-active:hover {
+    background:#fff!important;
+    color:#000!important;
+    margin:-1px!important;
+    z-index:2!important;
+    position:relative!important;
+    border:2px solid #fec6a8!important;
+}
+.Afisha .ui-datepicker .ui-state-default:hover,.Afisha .ui-datepicker .ui-widget-content .ui-state-default:hover,.Afisha .ui-datepicker .ui-widget-header .ui-state-default:hover {
+    background: url(/afisha/images/date_picker_hover.png);
+    color:#000000;
+    margin:0;
+    z-index:2;
+    position:relative;
+}
+.Afisha .ui-datepicker .ui-state-default:active,.Afisha .ui-datepicker .ui-widget-content .ui-state-default:active,.Afisha .ui-datepicker .ui-widget-header .ui-state-default:active {
+    background: url(/afisha/images/date_picker_active.png);
+    color:#000000;
+    margin:0;
+    z-index:2;
+    position:relative;
+}
+
+.Afisha .ui-datepicker .ui-state-highlight,.Afisha .ui-datepicker .ui-widget-content .ui-state-highlight,.Afisha .ui-datepicker .ui-widget-header .ui-state-highlight {
+    background:#ededed;
+    border-left:1px solid #fff;
+    border-top:1px solid #fff;
+    padding:5px 2px 6px 1px;
+    color:#8c8c8c;
+}
+.ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled  {
+    opacity:1;
+    filter:alpha(opacity=100);
+    color:#b4b4b4!important;
+
+}
+.ui-state-disabled .ui-state-default,.ui-state-disabled .ui-state-default:hover, .ui-widget-content .ui-state-disabled .ui-state-default, .ui-widget-content .ui-state-disabled .ui-state-default:hover, .ui-widget-header .ui-state-disabled  .ui-state-default:hover,.ui-widget-header .ui-state-disabled  .ui-state-default,.ui-state-disabled:hover .ui-state-default, .ui-widget-content .ui-state-disabled:hover .ui-state-default, .ui-widget-header .ui-state-disabled:hover  .ui-state-default{
+    background:none!important;
+    color:#b4b4b4!important;
+}
+.Afisha .ui-datepicker table {
+    font-size:12px;
+    margin-bottom:-1px;
+}
+.Afisha .ui-datepicker th {
+    font-size:11px;
+    font-weight:normal;
+    text-transform:uppercase;
+}
+.Afisha .ui-datepicker td {
+    padding:0;
+    border:1px solid #e6e6e6;
+}
+
+/* End Ivent Calendar */
+
+/* IventList */
+.iventList .NextMonth {
+    background:#f5f5f5   url(/afisha/images/arrNextMonth.png) no-repeat 196px  0;
+    display:block;
+    width:246px; height:107px;
+    border:1px solid #dde3e7;
+    font-size:18px;
+    font-weight:bold;
+    color:#000;
+}
+.iventList .NextMonth span {
+    display:block;
+    padding:16px 60px 20px 25px;
+    cursor:pointer;
+}
+.iventList .NextMonth:hover {
+    background-position:196px -107px;
+    background-color:#ebebeb;
+    text-decoration:none;
+    color:#000;
+}
+.iventList .NextMonth strong {
+    font-size:14px;
+}
+.iventList .NewsLine {
+    margin-bottom:40px;
+}
+.iventList .NewsLine .text {
+    padding-left:101px;
+    font-size:16px;
+    padding-top:16px;
+    display:block;
+}
+.iventList .NewsLine .text .Marked  li {
+    font-size:14px;
+    margin-bottom:5px;
+}
+.iventList .NewsLine .image {
+    width:90px;
+    text-align:center;
+}
+.iventList .Tabs{
+    position:relative;
+    z-index:2;
+    background:#f5f5f5;
+    border:1px solid #dde3e7;
+    float:none!important;
+    padding:3px 0 0 3px;
+    height:34px;
+}
+.iventList .Tabs li {
+    float: left;
+    padding:0;
+    margin:0;
+    background: none;
+}
+.iventList .Tabs li a {
+    background:#f5f5f5;
+    border:1px solid #f5f5f5;
+    border-bottom:1px solid #dde3e7;
+    display:block;
+    padding: 0 15px 0 16px;
+    height:33px;
+    line-height:31px;
+    margin:0 7px 0 0px;
+    position:static;
+    color:#050505;
+    font-size:16px;
+    font-weight:700;
+}
+
+.iventList .Tabs li a:hover {
+    text-decoration:none;
+}
+.iventList .Tabs li.active a,.Tabs li.active{
+    background-image:none;
+}
+.iventList .Tabs li.active a {
+    background: #F8F8F8;
+    border:1px solid #dde3e7;
+    border-bottom-color:#F9F9F9;
+    color:#3b3b3b;
+}
+.iventList .sortMonth {
+    background:#ffffff;
+    border:1px solid #dde3e7;
+    border-top:none;
+
+    padding:15px;
+    margin-bottom:20px;
+}
+.iventList .sortMonth  .Condition {
+    margin-left:0;
+    font-size:11px;
+    font-weight:700;
+    text-transform:uppercase;
+}
+.Condition li a {
+    -webkit-border-radius:10px 10px 10px 10px;
+}
+.Condition li a:hover {
+    text-decoration:none;
+}
+.iventList .sortMonth  .Condition b {
+    font-weight:700;
+    text-transform:uppercase;
+}
+
+    .iventList .ConditionContent .preview-box .image {width: 144px}
+
+.iventList li h4 .title:hover,.iventList li .image:hover + .text .title{
+    text-decoration:underline;
+}
+.iventList .TechInfo {
+    line-height:12px;
+    display:block;
+    margin-bottom:3px;
+}
+.ic_buy {
+    background:  url(/afisha/images/ic_buy.png) no-repeat;
+    line-height:15px;
+    padding-left:38px;
+    font-size:12px!important;
+    font-weight:bold;
+
+}
+.iventList li .subtitle {
+    font-size:12px;
+    color:#929292;
+    line-height:14px;
+    display:block;
+    margin-bottom:5px;
+}
+/*end:IventList */
+
+/*MonthCalendar*/
+.MonthCalendar {
+    position:absolute;
+    width:218px;
+    box-shadow:1px 1px 1px #dedede;
+    top:45px;
+    right:0;
+}
+.MonthCalendar .Year_header {
+    background:  url(/afisha/images/header_calendar.gif) repeat-x;
+    height:34px;
+    border:1px solid #dde3e7;
+    color:#fffefe;
+    position:relative;
+    margin-left:-1px;
+}
+.MonthCalendar .Year_header h4 {
+    font-size:16px!important;
+    font-weight:bold;
+    margin:0 24px;
+    text-align:center;
+    line-height:34px;
+    text-shadow:1px 1px 0 #000;
+}
+.MonthCalendar .Year_header .arrows {
+    height:34px;
+    position:absolute;
+    width:23px;
+    background:  url(/afisha/images/arr_datepicker.gif) no-repeat;
+    top:0;
+    display:block;
+}
+.MonthCalendar .Year_header .Year_arr_back {
+    left:0;
+    border-right:1px solid #555555;
+}
+.MonthCalendar .Year_header .Year_arr_back:hover {
+    background-position:0 -34px;
+}
+.MonthCalendar .Year_header .Year_arr_next {
+    background-position:-23px 0;
+    right:0;
+    border-left:1px solid #555555;
+}
+.MonthCalendar .Year_header .Year_arr_next:hover {
+    background-position:-23px -34px;
+}
+.MonthCalendar .Month_list {
+    background:#fff;
+}
+.MonthCalendar .Month_list ul {
+    width:108px;
+    font-size:13px;
+    border-left:1px solid #e6e6e6!ie;
+}
+.MonthCalendar .Month_list ul.fr {
+    margin-right:0;
+    left:-1px;
+    position:relative;
+}
+.MonthCalendar .Month_list ul li a {
+    display:block;
+    border:1px solid #e6e6e6;
+    margin:-1px;
+    margin:-1px 0 0 0!ie;
+    border-left:none!ie;
+    padding:6px 0 8px 26px;
+    color:#1a1a1a!important;
+    z-index:0;
+    zoom:1;
+}
+.MonthCalendar .Month_list ul li a:hover {
+    background:  url(/afisha/images/month_hover.gif) repeat-x;
+    border-color:#d9d9d9;
+    color:#000!important;
+    text-shadow:-1px 0 0 #fff;
+    text-decoration:none!important;
+    z-index:2;
+    margin-left:0!ie;
+}
+.MonthCalendar .Month_list ul li a.selected,.MonthCalendar .Month_list ul li a.selected:hover {
+    background:#fe6a18;
+    border-color:#e1580c;
+    color:#fff!important;
+    text-shadow:-1px 0 0 #dc5a11;
+    text-decoration:none!important;
+
+    z-index:2;
+}
+.MonthCalendar .Month_list ul li a.inactive,.MonthCalendar .Month_list ul li a.inactive:hover {
+    color:#929292!important;
+    text-decoration:none!important;
+    cursor:default;
+    background:transparent;
+    border-color:#e6e6e6;
+    text-shadow:none;
+    z-index:0;
+
+}
+/*end:MonthCalendar*/
+
+/*ArticleMore*/
+.ArticleMore {
+    padding-top:8px;
+    padding-bottom:9px;
+}
+.ArticleMore a {
+    display:block;
+    padding:6px 0 8px 0;
+}
+.ArticleMore a:hover {
+}
+
+/*
+.ArticleMore #article_back, .ArticleMore #article_back:hover{
+    top: 15px;
+    padding:0;
+    background:none;
+    border:none;
+}
+*/
+/*end:ArticleMore*/
+
+/*AfishaReports_sort*/
+
+.AfishaReports_sort {
+    background:#f5f5f5;
+    padding:14px;
+    border:1px solid #dde3e7;
+    margin-bottom:15px;
+    position:relative;
+    z-index: 2;
+}
+.AfishaReports_sort div.formst input {
+    height:22px;
+    line-height:22px;
+    height:20px!ie;
+}
+div.selectForm.formst {
+    zoom:1!ie;
+}
+.Afisha  div.formst .ac_results{
+    overflow:visible!ie;
+    left:13px!ie;
+    padding-right:30px!ie;
+    top:28px!ie;
+
+}
+.Afisha  div.formst .ac_results ul {
+    margin-right:-30px!ie;
+}
+.Afisha  div.formst .ac_results ul li {
+    zoom:1!ie;
+}
+.Afisha div.formst .btn_select {
+    background-image:  url(/afisha/images/ic_arr_select.png)!important;
+    width:31px;
+    height:30px;
+    top:0;
+    right:0;
+    border-left:1px solid #d2d6da;
+}
+.Afisha div.formst .btn_select:hover {
+    background-position:0 -30px;
+}
+.Afisha div.formst .btn_select:active {
+    background-position:0 -60px;
+}
+.AfishaReports_sort .selectReports {
+    width:237px;
+    margin-top:7px;
+}
+.AfishaReports_sort .selectParts {
+    width:155px;
+    margin-top:7px;
+    display:inline-block;
+    display:inline!ie;
+    zoom:1!ie;
+    vertical-align:middle;
+}
+.AfishaReports_sort .selectContent {
+    width:97px;
+    display:inline-block;
+    display:inline!ie;
+    zoom:1!ie;
+    margin-top:7px;
+    vertical-align:middle;
+}
+.AfishaReports_sort .title_sort {
+    display:inline-block;
+    display:inline!ie;
+    vertical-align:middle;
+    zoom:1!ie;
+    margin-right:5px;
+}
+.AfishaReports_sort .CalendarDatepicker input{
+    background: transparent;
+    border:none;
+    text-align: right;
+    padding-right: 15px;
+    font-size: 22px;
+    margin-top: 2px;
+    text-shadow: 1px 0 0 #FFFFFF;
+    vertical-align: middle;
+    width: 130px;
+}
+.EventReports p {
+    margin-bottom:3px;
+}
+.EventReports .date {
+    font-size:13px;
+    color:#929292;
+    display:block;
+    margin-bottom:6px;
+}
+.NewsList .date  {
+    font-size:12px;
+    color:#929292;
+    display:inline-block;
+    display:inline!ie;
+    zoom:1!ie;
+    margin-bottom:6px;
+}
+.EventReports .title1,.NewsList .title1 {
+    font-size:11px;
+    color:#FE6918 !important;
+    line-height: 12px;
+    text-transform: uppercase;
+}
+
+.EventReports li,.NewsList li {margin-bottom:27px;}
+/*end:AfishaReports_sort*/
+
+
+/*SearchResultMainBlock*/
+
+.Afisha .SearchResultMainBlock{
+    padding-top: 0;
+    margin-top: -15px;
+    background: none;
+}
+.Afisha .SearchResultMainBlock .B_inner{
+    padding-top: 10px;
+    position: relative;
+}
+.SearchResultMainBlock .no-result {
+    margin-top: 100px;
+    text-align: center;
+}
+.SearchResultMainBlock .no-result .image,
+.SearchResultMainBlock .no-result .text{
+    display: inline-block;
+    float: none;
+    vertical-align: middle;
+}
+.SearchResultMainBlock .no-result .text{
+    font-size: 15px;
+    padding-left: 20px;
+}
+.SearchResultMainBlock .add_toSite{
+    width: 660px; height: 500px;
+}
+
+.SearchResultMainBlock .preview-box:first-child{margin-top: 0}
+.SearchResultMainBlock .preview-box{margin-top: 15px}
+    .Afisha .SearchResultMainBlock .preview-box h4{
+        font-size: 20px;
+        font-weight: normal;
+        line-height: 20px;
+        padding-bottom: 5px;
+    }
+
+/*SearchResultMainBlock*/
+
+/*NotToMiss*/
+.NotToMiss .Li3 .preview-box .text h4 {
+    margin-bottom: -4px;
+    padding-bottom: 0;
+}
+
+
+
+/*new style swiper carousel  */
+
+.NotToMiss .swiper-slide.preview-box{
+    max-width: 170px;
+}
+.NotToMiss .swiper-slide.preview-box .text{
+    max-width: 150px;
+}
+
+.NotToMiss .swiper-container .swiper-button-prev,
+.NotToMiss .swiper-container .swiper-button-next{
+    background-color: rgba(255, 255, 255, 0.7);
+    top: 0;
+    height: 210px;
+    width: 37px;
+    margin: 0;
+}
+.NotToMiss .swiper-container .swiper-button-prev{
+    left: 0;
+}
+.NotToMiss .swiper-container .swiper-button-next{
+    right: -1px;
+}
+
+.NotToMiss .swiper-container .swiper-button-prev:hover,
+.NotToMiss .swiper-container .swiper-button-next:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/*end:NotToMiss*/
+
+/*Map*/
+.Map #map{min-height: 500px}
+.Map .add_toSite .search_buttons a{
+    font-weight: normal;
+    padding: 2px 6px 1px;
+    }
+    .Map .add_toSite .search_buttons a.current{color: #000000}
+    .Map .B_inner{
+        min-width: 660px;
+        min-height: 500px;
+    }
+/*end:Map*/
+
+/*BlockVideo*/
+.Afisha .BlockVideo .carousel .btn-prev.middle,
+.Afisha .BlockVideo .carousel .btn-next.middle{top: 111px}
+.Afisha .BlockVideo .preview-box .text h4{
+    padding-top: 5px;
+    height: 34px;
+    overflow: hidden;
+}
+/*end:BlockVideo*/
+
+
+/*News-line*/
+.News-line .preview-box .text p{line-height: 17px;}
+.News-line .load-more {margin-top: 10px}
+.News-line .load-more a{
+    display: block;
+    height: 35px;
+}
+
+.News-line .preview-box .marker{
+    font-family: 'GillSans';
+    font-size: 11px;
+    line-height: 13px;
+    text-align: center;
+    padding: 2px 3px;
+    width: 130px;
+    left: 134px; right: auto;
+    z-index: 1;
+}
+.News-line .preview-box .marker.reklama{
+    bottom: 10px;
+    left: 0;
+    top: auto;
+    right: auto;
+    width: auto;
+}
+/*end:News-line*/
+
+/*AnonceData*/
+.AnonceData {
+    font-size: 15px;
+    padding-bottom: 10px;
+    padding-left: 320px;
+    }
+    .AnonceData h1 {margin-top: -6px}
+    .AnonceData span {
+        display:block;
+        padding-bottom:5px;
+    }
+/*end:AnonceData*/
+
+/*MoreAdvice*/
+.MoreAdvice{
+    padding: 25px 0 0;
+    margin: 8px 0 0;
+    }
+/*MoreAdvice*/
+
+/*ExpertOpinionLeftSide*/
+.ExpertOpinionLeftSide{
+    float:left;
+    width:227px;
+    border: 1px solid #dde3e7;
+    background-color: #f5f5f5;
+    margin: 3px 10px 7px 0;
+}
+.ExpertOpinionLeftSide .EO_header{
+    background-color: #dde3e7;
+    display: block;
+    padding: 10px;
+    text-align: center;
+}
+.ExpertOpinionLeftSide .EO_header h3{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: normal;
+
+}
+.ExpertOpinionLeftSide .EO_inner{
+    padding: 10px;
+    display: block;
+}
+.ExpertOpinionLeftSide .image {
+    background: url("/images/framework/gSpriteComments.gif") no-repeat 0 -52px;
+    height: 32px;
+    width: 32px;
+    margin-bottom: 0;
+    float: left;
+    }
+    .ExpertOpinionLeftSide .image img{width: 32px; height: 32px;}
+
+.ExpertOpinionLeftSide .text{display: block}
+.ExpertOpinionLeftSide .text h4 {
+    color: #8A8888;
+    font-size: 13px;
+    min-height: 35px;
+    padding-left: 42px;
+}
+.ExpertOpinionLeftSide .text h4 .title {
+    color: #272727;
+    font-size: 13px;
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-top: -3px;
+    display: block;
+}
+.ExpertOpinionLeftSide .text .info{
+    display: block;
+}
+/*end ExpertOpinionLeftSide*/
+
+/**/
+.NewsLineWidget .ln_all li:first-child {margin-top: 0}
+.NewsLineWidget .ln_all li {
+    position:relative;
+    display:inline-block;
+    margin-top: 8px;
+}
+.NewsLineWidget .ln_time {
+    color: #7D7D7D;
+    float: left;
+    width: 43px;
+}
+.NewsLineWidget .ln_text {
+    padding-left:43px;
+}
+
+/**/
+
+/*filterSearch*/
+.filterSearch{
+    border: 1px solid #f5f5f5;
+    margin-bottom: 15px;
+}
+
+.filterSearch .searchBox{
+    position: relative;
+    top: -1px;
+    max-height: 31px;
+}
+/*filter-box*/
+.filter-menu{
+    padding: 10px;
+    background-color: #f5f5f5;
+}
+    .filter-menu>ul {
+        display: inline-block;
+        max-width: 400px;
+
+    }
+        .filter-menu>ul li{
+            display:inline-block;
+        }
+            .filter-menu>ul li > a{
+                display:inline-block;
+                height:28px;
+                margin:0 4px 0 0;
+                padding:0 14px;
+                border:1px solid #e5e5e5;
+                line-height: 28px;
+                cursor: pointer;
+                color:#666
+            }
+            .filter-menu>ul li > a:hover{text-decoration: none;}
+            .filter-menu>ul li.selected a {
+                background-color:#fd8100;
+                border:1px solid #fd8100;
+                cursor: default;
+                color:#FFF;
+            }
+.filter-menu .more{margin-top: 6px}
+.filter-menu .searchBox .autocomplete-box{right: 1px;}
+.filter-menu .searchBox .autocomplete-box input{
+    padding: 6px 10px;
+    border: 1px solid #E5E5E5;
+    min-width: 266px;
+}
+
+/*end:filter-box*/
+/*tags-menu*/
+.tags-menu .box-group{
+    max-height: 64px;
+    overflow: hidden;
+}
+.tags-menu ul{
+    display: block;
+}
+.tags-menu li{
+    margin:0 10px 8px 0;
+}
+.tags-menu li>a {
+    background-position: 0 -608px ;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:auto;
+    padding-left:14px;
+}
+.tags-menu li a>span {
+    display:block;
+    height:22px;
+    width:auto;
+    padding:0 4px 0 2px;
+    line-height:22px;
+    border:1px solid #e5e5e5;
+    border-radius:2px;
+    border-left:none;
+    font-size:12px;
+    color:#333;
+}
+.tags-menu li a>span:first-letter{text-transform: capitalize;}
+.tags-menu li a:hover {
+    background-position: 0 -640px;
+    text-decoration: none;
+}
+.tags-menu li:hover a>span {
+    background-color:#f1f1f1;
+    color:#525050;
+    text-decoration: none;
+}
+.tags-menu li.active a{
+    background-position: 0 -672px;
+    cursor: default;
+}
+.tags-menu li.active a>span {
+    background-color:#fd8100;
+    border-color: #fd8100;
+    color:#ffffff;
+    text-decoration: none;
+    cursor: default;
+}
+/*bt bt_close*/
+.filterSearch .searchBox .autocomplete-box .bt_close {
+    width: 27px;
+    height: 28px;
+    background-repeat: no-repeat;
+    background-position: 8px -697px;
+    background-color: #dedede;
+    position: absolute;
+    padding:0;
+    top: 1px;
+    right: -1px;
+}
+.filterSearch .searchBox .autocomplete-box .bt_close:hover{
+    background-color: #fd8100;
+    background-position: -15px -697px;
+}
+/*end:bt bt_close*/
+
+.filterSearch .searchBox .autocomplete-box .ui-autocomplete {
+    border: 1px solid #e6e6e6;
+    border-top: none;
+}
+.filterSearch .searchBox .autocomplete-box .ui-state-active,
+.filterSearch .searchBox .autocomplete-box .ui-state-hover,
+.filterSearch .searchBox .autocomplete-box .ui-state-focus{
+    border: none;
+    background: #fd8100;
+    box-shadow: none;
+    color: #ffffff;
+}
+.searchBox .autocomplete-box{z-index: 3}
+.searchBox .autocomplete-box input{margin-bottom: -1px;}
+.searchBox .autocomplete-box .ui-menu .ui-menu-item a{
+    line-height: 24px;
+    font-size: 13px;
+}
+.filterSearch .searchBox .autocomplete-box .ui-state-active a,
+.filterSearch .searchBox .autocomplete-box .ui-state-focus a,
+.searchBox .autocomplete-box .ui-menu .ui-menu-item:hover a{
+    color: #ffffff;
+    line-height: 24px;
+}
+.filterSearch .searchBox .autocomplete-box input::-webkit-input-placeholder {font-style: italic;}
+.filterSearch .searchBox .autocomplete-box input::-moz-placeholder {font-style: italic;}
+.filterSearch .searchBox .autocomplete-box input:-moz-placeholder {font-style: italic;}
+.filterSearch .searchBox .autocomplete-box input:-ms-input-placeholder {font-style: italic;}
+
+.info.no-result {
+    display: block;
+    text-align: center;
+    padding: 50px 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: #000000;
+}
+.info.no-result img{padding-right: 20px}
+/*end: filterSearch*/
+
+/*HP*/
+.Afisha .Block.Timetable-calendar .preview-box .marker{
+    top: 5px;
+    right: 5px;
+}
+
+/*VideoProkat*/
+.Zeroing .Li4.VideoProkat .preview-box .image{height: 210px;}
+.Li4.VideoProkat .preview-box .text h4 {padding-top: 0;}
+/*end:VideoProkat*/
+
+/*TVShowNews*/
+.TVShowNews .preview-box .text h4 {
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 14px;
+}
+.TVShowNews .preview-box .text h4 a{color: #595959;}
+.Li3 .preview-box .text h4 {padding-top: 7px;}
+/*end:TVShowNews*/
+
+/*TVShowVideo*/
+.column.middle .TVShowVideo .Li2 .preview-box .text h4{padding-top: 0;}
+.TVShowVideo .btn-play {
+    width: 68px;
+    height: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -34px;
+    margin-top: -35px;
+}
+/*end:TVShowVideo*/
+
+.Main .column.middle.left>.column.small.right{width: 340px;}
+.Main .column.middle.left>.column.small.right>.Block{padding-left: 20px;}
+.Main .column.middle.left>.column.small>.Block{
+    background: url(/afisha/images/line.jpg) repeat-x 0 0;
+    padding-top: 14px;
+}
+.Main .column.middle.left>.column.small .preview-box a{
+    margin-top: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+}
+/*end:HP*/
+
+
+/* fix */
+.block_header .icon,
+.info_block .icon, 
+.subscribe_widget .icon,
+.section_block .icon,
+.carousel.web-conference .icon {
+    background-image: url(/images/gui/tochka-toolbar/tchk_svgs.svg);
+    display: inline-block;
+    vertical-align: baseline;
+}

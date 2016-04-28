@@ -116,3 +116,9 @@ article .video-wrapper {
 .bar .title{
     text-align: center !important;
 }
+
+.gallery .tochka-rating .button {
+    min-width: inherit;
+    min-height: inherit;
+    line-height: normal;
+}

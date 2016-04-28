@@ -14,9 +14,9 @@ var paths = {
 
 
 gulp.task('mincss', function(){
-    return gulp.src('styles/*.css')
+    return gulp.src(paths.tochka_css, {base: './'})
         .pipe(cleanCSS(paths.tochka_css))
-        .pipe(gulp.dest(paths.tochka_css));
+        .pipe(gulp.dest('./'));
 });
 
 

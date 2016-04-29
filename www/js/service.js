@@ -82,9 +82,33 @@ service
     return {
         load: function(offset){
 
-            return $http.get(url+'?offset='+offset, {timeout: 70000}).then(function(response){
-                items = response.data;
-                return items;
+            return $http.get(url+'?offset='+offset+'&nocache=1', {timeout: 70000}).then(function(response){
+
+                var collectedId = [];
+
+                items.every(function(article){
+                    collectedId.push(article.id);
+                    return true;
+                });
+
+                if(offset > 0){
+                    response.data.every(function(article){
+                        if(collectedId.indexOf(article.id) === -1){
+                            items.push(article);
+                        }
+                        return true;
+                    });
+                }else {
+                    response.data.reverse().every(function (article) {
+                        if (collectedId.indexOf(article.id) === -1) {
+                            items.unshift(article);
+                        }
+                        return true;
+                    });
+                }
+
+                return response.data;
+
             }, function(){
                 $ionicPopup.alert({title: 'Connection error', content: 'Error with your connection'});
                 return [];
@@ -97,45 +121,43 @@ service
 
         get: function(id){
 
-            //@todo return promise, resolve -> article, reject -> reject from $http.get
-            //return $q(function(resolve, reject){
-                return $http.get(url_item + id + '/?json')
-                    .then(function(response){
+            return $http.get(url_item + id + '/?json')
+                .then(function(response){
 
-                        articles = StorageHelper.getArticlesFromLocalStorage();
+                    var articles = StorageHelper.getArticlesFromLocalStorage();
 
-                        curentArticle = null;
+                    var currentArticle = null;
 
-                        articles = articles.map(function(article){
-                            if(article.id == id){
-                                article.content = response.data.content;
-                                curentArticle = article;
-                            }
+                    articles = articles.map(function(article){
+                        if(article.id == id){
+                            article.content = response.data.content;
+                            currentArticle = article;
+                        }
 
-                            return article;
-                        });
-                        StorageHelper.save('articles', articles);
-
-                        return curentArticle;
-
-                    }, function(response){
-                        $ionicPopup.alert({title: 'Connection error', content: 'Error with your connection'});
-
-                        var articleFromCache = null;
-
-                        articles = StorageHelper.getArticlesFromLocalStorage();
-                        articles.every(function(article){
-                            if(article.id == id){
-                                articleFromCache = article;
-                                return false;
-                            }else{
-                                return true;
-                            }
-                        });
-
-                        return articleFromCache;
+                        return article;
                     });
-            //})
+                    StorageHelper.save('articles', articles);
+
+                    return currentArticle;
+
+                }, function(response){
+                    $ionicPopup.alert({title: 'Connection error', content: 'Error with your connection'});
+
+                    var articleFromCache = null;
+
+                    articles = StorageHelper.getArticlesFromLocalStorage();
+                    articles.every(function(article){
+                        if(article.id == id){
+                            articleFromCache = article;
+                            return false;
+                        }else{
+                            return true;
+                        }
+                    });
+
+                    return articleFromCache;
+                });
+
 
         }
     }

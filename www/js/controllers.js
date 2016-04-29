@@ -1,6 +1,6 @@
 angular.module('controllers', [])
 
-.controller('ArticlesCtrl', function($scope, $stateParams, $ionicPopup, $window, Articles, StorageHelper){
+.controller('ArticlesCtrl', function($scope, $stateParams, $ionicPopup, Articles, StorageHelper){
 
     $scope.articles = [];
 
@@ -24,9 +24,7 @@ angular.module('controllers', [])
         Articles
             .load(0)
             .then(function(){
-                $scope.articles = StorageHelper.storeArticles($scope.articles, Articles.all(), true);
-                console.log(Articles.all());
-                offset = 20;
+                $scope.articles = Articles.all();
             })
             .finally(function(){
                 $scope.$broadcast('scroll.refreshComplete');
@@ -52,13 +50,10 @@ angular.module('controllers', [])
 
 .controller('ArticleDetailCtrl', function( Articles, StorageHelper, $scope, $stateParams){
 
-    var articles = StorageHelper.getArticlesFromLocalStorage();
-
     $scope.item = {};
 
     Articles.get($stateParams.articleId)
         .then(function(article){
-            console.log(article);
             $scope.item = article;
         });
 

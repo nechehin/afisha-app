@@ -38,7 +38,14 @@ angular.module('app', ['ionic', 'controllers', 'service'])
 
 .filter('unsafe', function($sce) {
     return function(val) {
+        var regex = /href="([\S]+)"/g;
+        try {
+            val = val.replace(regex, "onClick=\"window.open('$1', '_system', 'location=yes')\"");
+        }catch (e){
+           //It is error, if text for filter is undefined.
+        }
         return $sce.trustAsHtml(val);
+
     };
 })
 

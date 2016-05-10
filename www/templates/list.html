@@ -11,7 +11,10 @@
         <ion-item class="feed-item" ng-repeat="article in articles" ui-sref="article({articleId: {{article.id}}})" href="#/article/{{article.id}}">
 
             <div class="media-left">
-                <img ng-src="{{article.thumb}}">
+                <img style="background-color: rgb({{ article.background[0] }},
+                                                  {{ article.background[1] }},
+                                                  {{ article.background[2] }}
+                                                  )" ng-src="{{article.thumb}}">
             </div>
             <div class="media-body">
                 <h3>{{article.title}}</h3>
@@ -20,6 +23,6 @@
         </ion-item>
 
     </ion-list>
-    <ion-infinite-scroll immediate-check="false" on-infinite="loadMoreItems()" distance="10%"></ion-infinite-scroll>
+    <ion-infinite-scroll immediate-check="false" on-infinite="loadMoreItems()" distance="10%" ></ion-infinite-scroll>
 </ion-content>
 </ion-view>

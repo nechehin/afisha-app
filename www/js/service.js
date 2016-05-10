@@ -91,23 +91,30 @@ service
                     return true;
                 });
 
+
+
                 if(offset > 0){
                     response.data.every(function(article){
                         if(collectedId.indexOf(article.id) === -1){
+                            if(article.background.length == 1){
+                                article.background = [255,255,255];
+                            }
                             items.push(article);
                         }
                         return true;
                     });
                 }else {
-                    response.data.reverse().every(function (article) {
+                    response.data.reverse().forEach(function (article) {
                         if (collectedId.indexOf(article.id) === -1) {
+                            if(article.background.length == 1){
+                                article.background = [255,255,255];
+                            }
                             items.unshift(article);
                         }
-                        return true;
                     });
                 }
 
-                return response.data;
+
 
             }, function(){
                 $ionicPopup.alert({title: 'Connection error', content: 'Error with your connection'});

@@ -82,7 +82,7 @@ service
     return {
         load: function(offset){
 
-            return $http.get(url+'?offset='+offset+'&nocache=1', {timeout: 70000}).then(function(response){
+            return $http.get(url+'?offset='+offset, {timeout: 70000}).then(function(response){
 
                 var collectedId = [];
 
@@ -140,12 +140,12 @@ service
 
                     return currentArticle;
 
-                }, function(response){
+                }, function(){
                     $ionicPopup.alert({title: 'Connection error', content: 'Error with your connection'});
 
                     var articleFromCache = null;
 
-                    articles = StorageHelper.getArticlesFromLocalStorage();
+                    var articles = StorageHelper.getArticlesFromLocalStorage();
                     articles.every(function(article){
                         if(article.id == id){
                             articleFromCache = article;

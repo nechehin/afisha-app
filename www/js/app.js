@@ -66,7 +66,7 @@ angular.module('app', ['ionic', 'controllers', 'service'])
       .state('article', {
         url: '/article/:articleId',
         templateUrl: 'templates/item.html',
-        controller: 'ArticleDetailCtrl',
+        controller: 'ArticleDetailCtrl'
 
       });
 

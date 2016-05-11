@@ -16,46 +16,16 @@ service
 
         },
 
-        storeArticles: function(storedArticles, loadedArticles, insertBefore){
+        storeArticles: function(articles){
 
-            if(storedArticles === null) {
-
-                console.error('scope.articles is null');
-                storedArticles = [];
-
-            }
-
-            var storedArticlesIds = [];
-
-            storedArticles.forEach(function (storedArticle) {
-                storedArticlesIds.push(storedArticle.id);
-            });
-
-            if(insertBefore){
-                loadedArticles = loadedArticles.reverse();
-            }
-            loadedArticles.forEach(function(loadedArticle){
-
-                if(storedArticlesIds.indexOf(loadedArticle.id) == -1){
-                    if(insertBefore) {
-
-                        storedArticles.unshift(loadedArticle);
-                    }else{
-                        storedArticles.push(loadedArticle);
-                    }
-                }
-
-            });
-
-            storedArticles.map(function(article){
-
+            articles.map(function(article){
                 delete article.$$hashKey;
                 return article;
-
             });
 
-            $window.localStorage.setItem('articles', JSON.stringify(storedArticles));
-            return storedArticles;
+            $window.localStorage.setItem('articles', JSON.stringify(articles));
+
+            return articles;
 
         },
 
@@ -113,6 +83,8 @@ service
                         }
                     });
                 }
+
+                StorageHelper.storeArticles(items);
 
 
 

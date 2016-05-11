@@ -9,7 +9,7 @@ angular.module('controllers', [])
         if($scope.articles.length > 0) {
             Articles.load(offset).then(function () {
 
-                $scope.articles = StorageHelper.storeArticles($scope.articles, Articles.all(), false);
+                $scope.articles = StorageHelper.storeArticles($scope.articles);
 
                 offset += 20;
 
@@ -40,7 +40,7 @@ angular.module('controllers', [])
 
     Articles.load(0).then(function(){
 
-        $scope.articles =  StorageHelper.storeArticles($scope.articles, Articles.all(), false);
+        $scope.articles =  StorageHelper.storeArticles($scope.articles);
 
         offset+= 20;
 

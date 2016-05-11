@@ -38,7 +38,7 @@ angular.module('app', ['ionic', 'controllers', 'service'])
 
 .filter('unsafe', function($sce) {
     return function(val) {
-        var regex = /href=\\?"([^"]+)\\?""/g;
+        var regex = /href=\\?"([^"]+)\\?"/g;
         try {
             val = val.replace(regex, "onClick=\"window.open('$1', '_system', 'location=yes')\"");
         }catch (e){

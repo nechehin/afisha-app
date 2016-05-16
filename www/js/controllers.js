@@ -1,25 +1,44 @@
 angular.module('controllers', [])
 
-.controller('ArticlesCtrl', function($scope, $stateParams, $ionicPopup, Articles, StorageHelper){
+.controller('ArticlesCtrl', function($scope, $stateParams, $ionicPopup, $ionicLoading, Articles, StorageHelper){
 
     $scope.articles = [];
-
+    $scope.disableLoadMore = false;
+    
     $scope.loadMoreItems = function(){
 
-        if($scope.articles.length > 0) {
-            Articles.load(offset).then(function () {
+        $ionicLoading.show({
+            template: 'Загрузка...'
+        });
 
-                $scope.articles = StorageHelper.storeArticles($scope.articles);
+        var old_articles_count = $scope.articles.length;
 
+        Articles.load(offset).then(function () {
+
+            $scope.articles = Articles.all();
+            StorageHelper.storeArticles($scope.articles);
+
+            if($scope.articles.length === old_articles_count){
+                $scope.disableLoadMore = true;
+                setTimeout(function(){
+                    $scope.disableLoadMore = false;
+                }, 500);
+            }else{
                 offset += 20;
+            }
 
-                $scope.$broadcast('scroll.infiniteScrollComplete')
-            });
-        }
+        }).finally(function(){
+            $scope.$broadcast('scroll.infiniteScrollComplete');
+            $ionicLoading.hide();
+        });
 
     };
 
     $scope.refreshListItems = function(){
+
+        $ionicLoading.show({
+            template: 'Загрузка...'
+        });
 
         Articles
             .load(0)
@@ -28,6 +47,7 @@ angular.module('controllers', [])
             })
             .finally(function(){
                 $scope.$broadcast('scroll.refreshComplete');
+                $ionicLoading.hide();
             });
 
 
@@ -38,24 +58,41 @@ angular.module('controllers', [])
 
     $scope.articles = StorageHelper.getArticlesFromLocalStorage();
 
+    if(!$scope.articles || $scope.articles.length === 0){
+        $ionicLoading.show({
+            template: 'Загрузка...'
+        });
+    }
+
     Articles.load(0).then(function(){
 
-        $scope.articles =  StorageHelper.storeArticles($scope.articles);
+        $scope.articles =  StorageHelper.storeArticles(Articles.all());
 
         offset+= 20;
+
+        $ionicLoading.hide();
 
     });
 
 })
 
-.controller('ArticleDetailCtrl', function( Articles, StorageHelper, $scope, $stateParams){
+.controller('ArticleDetailCtrl', function( Articles, StorageHelper, $scope, $stateParams, $ionicLoading){
 
     $scope.item = {};
 
-    Articles.get($stateParams.articleId)
-        .then(function(article){
-            $scope.item = article;
+    $scope.$on('$ionicView.enter', function(){
+        $ionicLoading.show({
+            template: 'Загрузка...'
         });
+
+        Articles
+            .get($stateParams.articleId)
+            .then(function(article){
+                $scope.item = article;
+            });
+    });
+
+
 
 
     $scope.$on("$ionicView.loaded", function(){
@@ -65,15 +102,7 @@ angular.module('controllers', [])
 
             if(document.getElementsByClassName('content').length > 0){
                 initArticle(document.getElementsByClassName('content')[0]);
-                // setTimeout(function(){
-                //     var html = document.getElementsByClassName('content')[0].innerHTML;
-                //
-                //     var regex = /href=\\?"([^"]+)\\?"/g;
-                //     html = html.replace(regex, "onClick=\"window.open('$1', '_system', 'location=yes')\"");
-                //     console.log(html);
-                //     document.getElementsByClassName('content')[0].innerHTML = html;
-                // }, 500);
-
+                $ionicLoading.hide();
                 clearInterval(interval);
             }
 

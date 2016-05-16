@@ -7,7 +7,7 @@ service
 
         getArticlesFromLocalStorage: function(){
 
-            if ($window.localStorage.getItem('articles') !== undefined) {
+            if ($window.localStorage.getItem('articles') !== undefined && $window.localStorage.getItem('articles')){
                 return JSON.parse($window.localStorage.getItem('articles'));
             } else {
                 $window.localStorage.setItem('articles', '[]');
@@ -21,6 +21,31 @@ service
             articles.map(function(article){
                 delete article.$$hashKey;
                 return article;
+            });
+
+            var old_articles = this.getArticlesFromLocalStorage();
+            var old_article_ids = [];
+            old_articles.forEach(function(article){
+                old_article_ids.push(article.id);
+            });
+
+            articles = old_articles.concat(articles.filter(function(el){
+                if(old_article_ids.indexOf(el.id) === -1){
+                    return true;
+                }else{
+                    return false;
+                }
+            }));
+
+            articles.sort(function(a, b){
+               if(a.id > b.id){
+                   return -1;
+               }
+               if(a.id < b.id){
+                   return 1;
+               }
+
+               return 0;
             });
 
             $window.localStorage.setItem('articles', JSON.stringify(articles));
@@ -89,7 +114,7 @@ service
 
 
             }, function(){
-                $ionicPopup.alert({title: 'Connection error', content: 'Error with your connection'});
+                $ionicPopup.alert({title: 'Ошибка соединения', content: 'Ошибка в Вашем соединении с интернетом'});
                 return [];
             });
         },
@@ -120,7 +145,7 @@ service
                     return currentArticle;
 
                 }, function(){
-                    $ionicPopup.alert({title: 'Connection error', content: 'Error with your connection'});
+                    $ionicPopup.alert({title: 'Ошибка соединения', content: 'Ошибка в Вашем соединении с интернетом'});
 
                     var articleFromCache = null;
 

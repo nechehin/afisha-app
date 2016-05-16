@@ -22,14 +22,14 @@ angular.module('app', ['ionic', 'controllers', 'service'])
         if(window.StatusBar) {
           StatusBar.styleDefault();
         }
-        //if(window.Connection) {
-        //    if(navigator.connection.type == Connection.NONE) {
-        //        $ionicPopup.alert({
-        //            title: "Проблема соединения",
-        //            content: "Отсутствует соединение с интернетом"
-        //        });
-        //    }
-        //}
+        if(window.Connection) {
+           if(navigator.connection.type == Connection.NONE) {
+               $ionicPopup.alert({
+                   title: "Проблема соединения",
+                   content: "Отсутствует соединение с интернетом"
+               });
+           }
+        }
   });
 
 

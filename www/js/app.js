@@ -19,9 +19,11 @@ angular.module('app', ['ionic', 'controllers', 'service'])
           // a much nicer keyboard experience.
           cordova.plugins.Keyboard.disableScroll(true);
         }
+
         if(window.StatusBar) {
           StatusBar.styleDefault();
         }
+
         if(window.Connection) {
            if(navigator.connection.type == Connection.NONE) {
                $ionicPopup.alert({
@@ -30,6 +32,14 @@ angular.module('app', ['ionic', 'controllers', 'service'])
                });
            }
         }
+
+        if (typeof analytics !== 'undefined') {
+            console.log("Google Analytics Init");
+            analytics.startTrackerWithId("UA-8293945-26");
+        } else {
+            console.log("Google Analytics Unavailable");
+        }
+
   });
 
 

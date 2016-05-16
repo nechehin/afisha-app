@@ -4,6 +4,18 @@ angular.module('controllers', [])
 
     $scope.articles = [];
     $scope.disableLoadMore = false;
+
+    if (typeof analytics !== 'undefined') {
+        analytics.trackView('List');
+    }
+
+    $scope.$on('$ionicView.enter', function() {
+        if (typeof analytics !== 'undefined') {
+            analytics.trackEvent('List', 'View');
+        }
+    });
+
+
     
     $scope.loadMoreItems = function(){
 
@@ -80,7 +92,16 @@ angular.module('controllers', [])
 
     $scope.item = {};
 
+    if (typeof analytics !== 'undefined') {
+        analytics.trackView('ArticleDetail');
+    }
+
     $scope.$on('$ionicView.enter', function(){
+
+        if (typeof analytics !== 'undefined') {
+            analytics.trackEvent('Article', 'View', $stateParams.articleId);
+        }
+
         $ionicLoading.show({
             template: 'Загрузка...'
         });
